@@ -1,7 +1,7 @@
 $ErrorActionPreference = 'Stop'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12 -bor [Net.SecurityProtocolType]::Tls13
 
-$binDir = "d:\Nikit\bin"
+$binDir = if ($PSScriptRoot) { Join-Path $PSScriptRoot "bin" } else { Join-Path (Get-Location) "bin" }
 if (-not (Test-Path $binDir)) {
     New-Item -ItemType Directory -Path $binDir -Force | Out-Null
 }
