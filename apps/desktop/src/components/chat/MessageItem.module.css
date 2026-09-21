@@ -1,0 +1,273 @@
+.messageContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--nikit-border-subtle);
+  position: relative;
+  transition: background-color var(--nikit-duration-fast) var(--nikit-ease-default);
+}
+
+.messageContainer:last-child {
+  border-bottom: none;
+}
+
+.messageContainer:hover .actionToolbar {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Header Info */
+.messageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  user-select: none;
+}
+
+.senderGroup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.senderName {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--nikit-text-primary);
+  letter-spacing: -0.01em;
+}
+
+.timestamp {
+  font-size: 11px;
+  color: var(--nikit-text-tertiary);
+  margin-left: 4px;
+}
+
+.telemetryBadge {
+  font-size: 11px;
+  font-family: var(--nikit-font-mono);
+  color: var(--nikit-text-tertiary);
+  background-color: var(--nikit-surface-sunken);
+  padding: 2px 6px;
+  border-radius: var(--nikit-radius-sm);
+  border: 1px solid var(--nikit-border-subtle);
+}
+
+/* Action Toolbar */
+.actionToolbar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--nikit-duration-fast) var(--nikit-ease-default);
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--nikit-radius-sm);
+  background-color: var(--nikit-surface-raised);
+  border: 1px solid var(--nikit-border-subtle);
+  color: var(--nikit-text-tertiary);
+  cursor: pointer;
+  transition: all var(--nikit-duration-fast) var(--nikit-ease-default);
+}
+
+.actionBtn:hover {
+  color: var(--nikit-text-primary);
+  background-color: var(--nikit-surface-overlay);
+  border-color: var(--nikit-border-base);
+}
+
+.actionBtnCopied {
+  color: var(--nikit-local-base);
+  border-color: var(--nikit-local-base);
+}
+
+/* Content Body */
+.messageBody {
+  color: var(--nikit-text-secondary);
+  font-size: 14px;
+  line-height: 1.68;
+  word-break: break-word;
+}
+
+.messageBody p {
+  margin: 0 0 10px 0;
+  color: var(--nikit-text-primary);
+}
+
+.messageBody p:last-child {
+  margin-bottom: 0;
+}
+
+.messageBody ul,
+.messageBody ol {
+  margin: 8px 0 12px 20px;
+  padding: 0;
+}
+
+.messageBody li {
+  margin-bottom: 4px;
+  color: var(--nikit-text-primary);
+}
+
+.messageBody h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--nikit-text-primary);
+  margin: 16px 0 8px 0;
+}
+
+/* User Message Styling */
+.userMessageContainer {
+  background-color: transparent;
+}
+
+.userMessageText {
+  color: var(--nikit-text-primary);
+  font-size: 14px;
+  white-space: pre-wrap;
+}
+
+.attachedContextList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.attachedContextBubble {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--nikit-radius-md);
+  background-color: var(--nikit-surface-raised);
+  border: 1px solid var(--nikit-border-subtle);
+  font-size: 12px;
+  color: var(--nikit-text-primary);
+}
+
+.attachedFileName {
+  font-weight: 500;
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.attachedFileSize {
+  font-size: 10px;
+  color: var(--nikit-text-tertiary);
+  font-family: var(--nikit-font-mono);
+}
+
+/* Inline Edit Surface */
+.editContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--nikit-surface-raised);
+  border: 1px solid var(--nikit-border-base);
+  border-radius: var(--nikit-radius-md);
+  padding: 12px;
+}
+
+.editTextarea {
+  width: 100%;
+  min-height: 80px;
+  background: transparent;
+  border: none;
+  color: var(--nikit-text-primary);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: vertical;
+  outline: none;
+}
+
+.editActions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+/* Streaming Typing Indicator */
+.streamingCursor {
+  display: inline-block;
+  width: 7px;
+  height: 14px;
+  background-color: var(--nikit-accent-base);
+  margin-left: 4px;
+  vertical-align: middle;
+  border-radius: 1px;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Error Card */
+.errorCard {
+  margin-top: 10px;
+  padding: 12px 14px;
+  border-radius: var(--nikit-radius-md);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  background-color: rgba(239, 68, 68, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.errorHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.errorTitle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--nikit-danger-base);
+}
+
+.errorMessage {
+  font-size: 13px;
+  color: var(--nikit-text-primary);
+}
+
+.errorDetailsSummary {
+  font-size: 11px;
+  color: var(--nikit-text-tertiary);
+  cursor: pointer;
+  user-select: none;
+}
+
+.errorDetailsBox {
+  margin-top: 6px;
+  padding: 8px;
+  background-color: var(--nikit-surface-sunken);
+  border-radius: var(--nikit-radius-sm);
+  font-family: var(--nikit-font-mono);
+  font-size: 11px;
+  color: var(--nikit-text-secondary);
+  white-space: pre-wrap;
+}

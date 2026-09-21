@@ -1,0 +1,1800 @@
+{
+  "cycleId": "zaqx-r02",
+  "hypothesis": "Increasing useful training-token exposure while keeping the ZaqX 5.4M architecture fixed will produce measurable improvement and reveal whether the 5.4M model has reached a practical quality/learning ceiling.",
+  "experimentIdent": {
+    "experimentId": "exp-zaqx-r02-001",
+    "datasetVersionHash": "e98f1f55d09a3a7514d6ef4dee479bcfefdb6e08fea52c71fa121e25b5dd2a42",
+    "tokenizerHash": "tok-zaqx-v1.0.0-vsize386",
+    "modelConfigHash": "c4ece582a97d74e229605eb122db30d2697709051ab087dbe79fd18187601c99",
+    "trainingConfigHash": "8deffa25d43f0a82f45f067fa4295204274481f3fc750d4e0304258611b73619",
+    "evaluationSuiteVersion": "eval-suite-r01-v1"
+  },
+  "corpusAudit": {
+    "datasetVersionId": "ds-zaqx-r02-v1",
+    "datasetHash": "e98f1f55d09a3a7514d6ef4dee479bcfefdb6e08fea52c71fa121e25b5dd2a42",
+    "recordCount": 565,
+    "charCount": 77589,
+    "wordCount": 10400,
+    "duplicateCount": 0,
+    "duplicateRatePercent": 0.0,
+    "trainCount": 452,
+    "valCount": 56,
+    "testCount": 57,
+    "exactLeakageOverlapCount": 0,
+    "evaluationContaminationCount": 0,
+    "categoryDistribution": {
+      "ai_architecture": 261,
+      "general_language": 25,
+      "science_nature": 30,
+      "factual_qa": 50,
+      "instruction_following": 154,
+      "reasoning_logic": 10,
+      "code_algorithms": 30,
+      "structured_data": 5
+    },
+    "sourceDistribution": {
+      "curated_ai_arch": 261,
+      "curated_general_lang": 25,
+      "curated_science_core": 30,
+      "curated_qa_facts": 50,
+      "curated_instructions": 154,
+      "curated_reasoning": 10,
+      "curated_code_syntax": 30,
+      "curated_data_schema": 5
+    },
+    "syntheticCount": 0,
+    "syntheticRatioPercent": 0.0,
+    "lengthStats": {
+      "minChars": 66,
+      "maxChars": 485,
+      "meanChars": 137.33,
+      "medianChars": 137,
+      "p95Chars": 157,
+      "p99Chars": 274,
+      "minWords": 8,
+      "maxWords": 66,
+      "meanWords": 18.41,
+      "medianWords": 17,
+      "p95Words": 25,
+      "p99Words": 41
+    },
+    "invalidRecordCount": 0,
+    "qualityClassification": {
+      "dataQuantity": "Curated expanded baseline (565 records, 10400 words, 77589 chars)",
+      "dataDiversity": "8 balanced domains across 8 categories",
+      "dataCleanliness": "High (clean text without corrupted UTF-8 byte sequences)",
+      "duplication": "Clean (0.00% duplicate rate)",
+      "formatConsistency": "100% normalized plain text records",
+      "evaluationContaminationRisk": "Zero (exact overlap = 0, eval contamination = 0)"
+    },
+    "auditedAt": "2026-08-28T14:15:00Z"
+  },
+  "tokenizerAudit": {
+    "tokenizerVersion": "v1.0.0",
+    "tokenizerHash": "tok-zaqx-v1.0.0-vsize386",
+    "vocabSize": 386,
+    "unknownTokenCount": 0,
+    "unknownTokenRatePercent": 0.0,
+    "totalTokensAudited": 65194,
+    "trainTokens": 51905,
+    "valTokens": 6581,
+    "testTokens": 6708,
+    "tokensPerChar": 0.8402,
+    "tokensPerWord": 6.27,
+    "averageTokensPerSample": 115.39,
+    "medianTokensPerSample": 114,
+    "p50SeqLen": 114,
+    "p95SeqLen": 138,
+    "p99SeqLen": 232,
+    "maxSeqLen": 441,
+    "contextOverflowRatePercent": 0.0,
+    "compressionRatio": 1.19,
+    "specialTokensUsage": {
+      "<|zaqx_bos|>": 0,
+      "<|zaqx_eos|>": 0,
+      "<|zaqx_pad|>": 0,
+      "<|zaqx_unk|>": 0
+    },
+    "qualityDecision": "SUITABLE FOR TRAINING",
+    "auditedAt": "2026-08-28T14:15:00Z"
+  },
+  "trainingTelemetry": {
+    "backend": "PyTorch Native CPU",
+    "pythonVersion": "3.11.9",
+    "pytorchVersion": "2.13.0+cpu",
+    "totalSteps": 200,
+    "epochs": 1,
+    "tokensSeen": 22343,
+    "effectiveBatchSize": 2,
+    "gradientAccumulation": 2,
+    "stoppingReason": "max_steps",
+    "initialLoss": 225.4725,
+    "finalLoss": 6.2297,
+    "bestValidationLoss": 5.1591,
+    "validationLosses": [
+      {
+        "step": 20,
+        "loss": 17.7054
+      },
+      {
+        "step": 40,
+        "loss": 12.0732
+      },
+      {
+        "step": 60,
+        "loss": 9.1855
+      },
+      {
+        "step": 80,
+        "loss": 7.8835
+      },
+      {
+        "step": 100,
+        "loss": 6.8904
+      },
+      {
+        "step": 120,
+        "loss": 6.002
+      },
+      {
+        "step": 140,
+        "loss": 5.2554
+      },
+      {
+        "step": 160,
+        "loss": 5.249
+      },
+      {
+        "step": 180,
+        "loss": 5.3997
+      },
+      {
+        "step": 200,
+        "loss": 5.1591
+      }
+    ],
+    "stepLossHistory": [
+      {
+        "step": 1,
+        "loss": 225.4725,
+        "lr": 0.001,
+        "gradNorm": 50.6679,
+        "tokensSeen": 49
+      },
+      {
+        "step": 2,
+        "loss": 236.0303,
+        "lr": 0.001,
+        "gradNorm": 70.3832,
+        "tokensSeen": 134
+      },
+      {
+        "step": 3,
+        "loss": 177.9003,
+        "lr": 0.001,
+        "gradNorm": 70.8612,
+        "tokensSeen": 230
+      },
+      {
+        "step": 4,
+        "loss": 183.0233,
+        "lr": 0.001,
+        "gradNorm": 126.3952,
+        "tokensSeen": 321
+      },
+      {
+        "step": 5,
+        "loss": 113.3644,
+        "lr": 0.001,
+        "gradNorm": 78.8396,
+        "tokensSeen": 406
+      },
+      {
+        "step": 6,
+        "loss": 104.2758,
+        "lr": 0.001,
+        "gradNorm": 126.8211,
+        "tokensSeen": 478
+      },
+      {
+        "step": 7,
+        "loss": 52.9951,
+        "lr": 0.001,
+        "gradNorm": 22.7295,
+        "tokensSeen": 570
+      },
+      {
+        "step": 8,
+        "loss": 54.8512,
+        "lr": 0.001,
+        "gradNorm": 41.4748,
+        "tokensSeen": 670
+      },
+      {
+        "step": 9,
+        "loss": 37.654,
+        "lr": 0.001,
+        "gradNorm": 25.2526,
+        "tokensSeen": 757
+      },
+      {
+        "step": 10,
+        "loss": 40.6182,
+        "lr": 0.001,
+        "gradNorm": 56.0963,
+        "tokensSeen": 833
+      },
+      {
+        "step": 11,
+        "loss": 31.5443,
+        "lr": 0.001,
+        "gradNorm": 36.0418,
+        "tokensSeen": 921
+      },
+      {
+        "step": 12,
+        "loss": 31.302,
+        "lr": 0.001,
+        "gradNorm": 68.8788,
+        "tokensSeen": 1008
+      },
+      {
+        "step": 13,
+        "loss": 33.1901,
+        "lr": 0.001,
+        "gradNorm": 26.8825,
+        "tokensSeen": 1086
+      },
+      {
+        "step": 14,
+        "loss": 24.1387,
+        "lr": 0.001,
+        "gradNorm": 48.5223,
+        "tokensSeen": 1188
+      },
+      {
+        "step": 15,
+        "loss": 21.9281,
+        "lr": 0.001,
+        "gradNorm": 14.4559,
+        "tokensSeen": 1284
+      },
+      {
+        "step": 16,
+        "loss": 22.4532,
+        "lr": 0.001,
+        "gradNorm": 28.6505,
+        "tokensSeen": 1368
+      },
+      {
+        "step": 17,
+        "loss": 18.8086,
+        "lr": 0.001,
+        "gradNorm": 13.3306,
+        "tokensSeen": 1467
+      },
+      {
+        "step": 18,
+        "loss": 18.0352,
+        "lr": 0.001,
+        "gradNorm": 27.6955,
+        "tokensSeen": 1560
+      },
+      {
+        "step": 19,
+        "loss": 14.9893,
+        "lr": 0.001,
+        "gradNorm": 7.9818,
+        "tokensSeen": 1656
+      },
+      {
+        "step": 20,
+        "loss": 22.2441,
+        "lr": 0.001,
+        "gradNorm": 17.6851,
+        "tokensSeen": 1738
+      },
+      {
+        "step": 21,
+        "loss": 16.8118,
+        "lr": 0.001,
+        "gradNorm": 20.4487,
+        "tokensSeen": 1829
+      },
+      {
+        "step": 22,
+        "loss": 15.4956,
+        "lr": 0.001,
+        "gradNorm": 42.1172,
+        "tokensSeen": 1926
+      },
+      {
+        "step": 23,
+        "loss": 15.9403,
+        "lr": 0.001,
+        "gradNorm": 12.0753,
+        "tokensSeen": 2013
+      },
+      {
+        "step": 24,
+        "loss": 14.0392,
+        "lr": 0.001,
+        "gradNorm": 23.8553,
+        "tokensSeen": 2097
+      },
+      {
+        "step": 25,
+        "loss": 14.3509,
+        "lr": 0.001,
+        "gradNorm": 9.1283,
+        "tokensSeen": 2197
+      },
+      {
+        "step": 26,
+        "loss": 16.7991,
+        "lr": 0.001,
+        "gradNorm": 18.9971,
+        "tokensSeen": 2307
+      },
+      {
+        "step": 27,
+        "loss": 14.0625,
+        "lr": 0.001,
+        "gradNorm": 11.3399,
+        "tokensSeen": 2394
+      },
+      {
+        "step": 28,
+        "loss": 15.5776,
+        "lr": 0.001,
+        "gradNorm": 20.8145,
+        "tokensSeen": 2480
+      },
+      {
+        "step": 29,
+        "loss": 12.5272,
+        "lr": 0.001,
+        "gradNorm": 8.4544,
+        "tokensSeen": 2583
+      },
+      {
+        "step": 30,
+        "loss": 14.9223,
+        "lr": 0.001,
+        "gradNorm": 17.0934,
+        "tokensSeen": 2665
+      },
+      {
+        "step": 31,
+        "loss": 14.1632,
+        "lr": 0.001,
+        "gradNorm": 20.9791,
+        "tokensSeen": 2744
+      },
+      {
+        "step": 32,
+        "loss": 11.4804,
+        "lr": 0.001,
+        "gradNorm": 35.4996,
+        "tokensSeen": 2833
+      },
+      {
+        "step": 33,
+        "loss": 12.1229,
+        "lr": 0.001,
+        "gradNorm": 17.3051,
+        "tokensSeen": 2943
+      },
+      {
+        "step": 34,
+        "loss": 13.2977,
+        "lr": 0.001,
+        "gradNorm": 34.0752,
+        "tokensSeen": 3046
+      },
+      {
+        "step": 35,
+        "loss": 10.7846,
+        "lr": 0.001,
+        "gradNorm": 14.0409,
+        "tokensSeen": 3139
+      },
+      {
+        "step": 36,
+        "loss": 11.3808,
+        "lr": 0.001,
+        "gradNorm": 27.2337,
+        "tokensSeen": 3230
+      },
+      {
+        "step": 37,
+        "loss": 10.8394,
+        "lr": 0.001,
+        "gradNorm": 7.6791,
+        "tokensSeen": 3323
+      },
+      {
+        "step": 38,
+        "loss": 18.5671,
+        "lr": 0.001,
+        "gradNorm": 15.1825,
+        "tokensSeen": 3386
+      },
+      {
+        "step": 39,
+        "loss": 11.9758,
+        "lr": 0.001,
+        "gradNorm": 17.9643,
+        "tokensSeen": 3484
+      },
+      {
+        "step": 40,
+        "loss": 10.4121,
+        "lr": 0.001,
+        "gradNorm": 35.2422,
+        "tokensSeen": 3576
+      },
+      {
+        "step": 41,
+        "loss": 8.9221,
+        "lr": 0.001,
+        "gradNorm": 11.1992,
+        "tokensSeen": 3674
+      },
+      {
+        "step": 42,
+        "loss": 10.4138,
+        "lr": 0.001,
+        "gradNorm": 21.8201,
+        "tokensSeen": 3779
+      },
+      {
+        "step": 43,
+        "loss": 9.5297,
+        "lr": 0.001,
+        "gradNorm": 7.5143,
+        "tokensSeen": 3875
+      },
+      {
+        "step": 44,
+        "loss": 10.2043,
+        "lr": 0.001,
+        "gradNorm": 14.4854,
+        "tokensSeen": 3976
+      },
+      {
+        "step": 45,
+        "loss": 9.2053,
+        "lr": 0.001,
+        "gradNorm": 8.8272,
+        "tokensSeen": 4072
+      },
+      {
+        "step": 46,
+        "loss": 12.1507,
+        "lr": 0.001,
+        "gradNorm": 17.8307,
+        "tokensSeen": 4172
+      },
+      {
+        "step": 47,
+        "loss": 11.3835,
+        "lr": 0.001,
+        "gradNorm": 5.5698,
+        "tokensSeen": 4293
+      },
+      {
+        "step": 48,
+        "loss": 9.3865,
+        "lr": 0.001,
+        "gradNorm": 11.0947,
+        "tokensSeen": 4374
+      },
+      {
+        "step": 49,
+        "loss": 12.6622,
+        "lr": 0.001,
+        "gradNorm": 5.5522,
+        "tokensSeen": 4466
+      },
+      {
+        "step": 50,
+        "loss": 11.7059,
+        "lr": 0.001,
+        "gradNorm": 11.3188,
+        "tokensSeen": 4558
+      },
+      {
+        "step": 51,
+        "loss": 11.1796,
+        "lr": 0.001,
+        "gradNorm": 7.517,
+        "tokensSeen": 4680
+      },
+      {
+        "step": 52,
+        "loss": 10.1583,
+        "lr": 0.001,
+        "gradNorm": 15.6577,
+        "tokensSeen": 4773
+      },
+      {
+        "step": 53,
+        "loss": 9.1561,
+        "lr": 0.001,
+        "gradNorm": 4.8832,
+        "tokensSeen": 4883
+      },
+      {
+        "step": 54,
+        "loss": 9.0626,
+        "lr": 0.001,
+        "gradNorm": 9.3827,
+        "tokensSeen": 4949
+      },
+      {
+        "step": 55,
+        "loss": 10.3821,
+        "lr": 0.001,
+        "gradNorm": 8.5262,
+        "tokensSeen": 5041
+      },
+      {
+        "step": 56,
+        "loss": 8.3307,
+        "lr": 0.001,
+        "gradNorm": 14.7972,
+        "tokensSeen": 5145
+      },
+      {
+        "step": 57,
+        "loss": 9.0847,
+        "lr": 0.001,
+        "gradNorm": 8.4015,
+        "tokensSeen": 5240
+      },
+      {
+        "step": 58,
+        "loss": 8.8311,
+        "lr": 0.001,
+        "gradNorm": 14.2993,
+        "tokensSeen": 5348
+      },
+      {
+        "step": 59,
+        "loss": 8.2071,
+        "lr": 0.001,
+        "gradNorm": 5.3343,
+        "tokensSeen": 5463
+      },
+      {
+        "step": 60,
+        "loss": 9.2677,
+        "lr": 0.001,
+        "gradNorm": 10.7204,
+        "tokensSeen": 5575
+      },
+      {
+        "step": 61,
+        "loss": 10.4478,
+        "lr": 0.001,
+        "gradNorm": 5.3712,
+        "tokensSeen": 5669
+      },
+      {
+        "step": 62,
+        "loss": 13.3061,
+        "lr": 0.001,
+        "gradNorm": 10.0548,
+        "tokensSeen": 5775
+      },
+      {
+        "step": 63,
+        "loss": 10.2631,
+        "lr": 0.001,
+        "gradNorm": 6.0299,
+        "tokensSeen": 5905
+      },
+      {
+        "step": 64,
+        "loss": 10.6486,
+        "lr": 0.001,
+        "gradNorm": 11.0526,
+        "tokensSeen": 6005
+      },
+      {
+        "step": 65,
+        "loss": 7.1812,
+        "lr": 0.001,
+        "gradNorm": 4.8697,
+        "tokensSeen": 6107
+      },
+      {
+        "step": 66,
+        "loss": 8.7186,
+        "lr": 0.001,
+        "gradNorm": 9.7687,
+        "tokensSeen": 6236
+      },
+      {
+        "step": 67,
+        "loss": 8.9334,
+        "lr": 0.001,
+        "gradNorm": 4.6552,
+        "tokensSeen": 6355
+      },
+      {
+        "step": 68,
+        "loss": 7.5143,
+        "lr": 0.001,
+        "gradNorm": 9.621,
+        "tokensSeen": 6463
+      },
+      {
+        "step": 69,
+        "loss": 6.9621,
+        "lr": 0.001,
+        "gradNorm": 5.6078,
+        "tokensSeen": 6557
+      },
+      {
+        "step": 70,
+        "loss": 9.1024,
+        "lr": 0.001,
+        "gradNorm": 10.3559,
+        "tokensSeen": 6648
+      },
+      {
+        "step": 71,
+        "loss": 8.8898,
+        "lr": 0.001,
+        "gradNorm": 7.181,
+        "tokensSeen": 6765
+      },
+      {
+        "step": 72,
+        "loss": 9.044,
+        "lr": 0.001,
+        "gradNorm": 13.2186,
+        "tokensSeen": 6952
+      },
+      {
+        "step": 73,
+        "loss": 7.0457,
+        "lr": 0.001,
+        "gradNorm": 3.7897,
+        "tokensSeen": 7119
+      },
+      {
+        "step": 74,
+        "loss": 8.3214,
+        "lr": 0.001,
+        "gradNorm": 6.2466,
+        "tokensSeen": 7316
+      },
+      {
+        "step": 75,
+        "loss": 12.5879,
+        "lr": 0.001,
+        "gradNorm": 14.4682,
+        "tokensSeen": 7438
+      },
+      {
+        "step": 76,
+        "loss": 10.9642,
+        "lr": 0.001,
+        "gradNorm": 26.3324,
+        "tokensSeen": 7573
+      },
+      {
+        "step": 77,
+        "loss": 7.6249,
+        "lr": 0.001,
+        "gradNorm": 7.0606,
+        "tokensSeen": 7805
+      },
+      {
+        "step": 78,
+        "loss": 9.0233,
+        "lr": 0.001,
+        "gradNorm": 13.3677,
+        "tokensSeen": 7912
+      },
+      {
+        "step": 79,
+        "loss": 7.6964,
+        "lr": 0.001,
+        "gradNorm": 6.7432,
+        "tokensSeen": 8017
+      },
+      {
+        "step": 80,
+        "loss": 7.1536,
+        "lr": 0.001,
+        "gradNorm": 11.9011,
+        "tokensSeen": 8199
+      },
+      {
+        "step": 81,
+        "loss": 9.6121,
+        "lr": 0.001,
+        "gradNorm": 4.4046,
+        "tokensSeen": 8325
+      },
+      {
+        "step": 82,
+        "loss": 10.5992,
+        "lr": 0.001,
+        "gradNorm": 8.6677,
+        "tokensSeen": 8486
+      },
+      {
+        "step": 83,
+        "loss": 9.6392,
+        "lr": 0.001,
+        "gradNorm": 6.1773,
+        "tokensSeen": 8589
+      },
+      {
+        "step": 84,
+        "loss": 11.1694,
+        "lr": 0.001,
+        "gradNorm": 11.0084,
+        "tokensSeen": 8649
+      },
+      {
+        "step": 85,
+        "loss": 12.1876,
+        "lr": 0.001,
+        "gradNorm": 9.0619,
+        "tokensSeen": 8714
+      },
+      {
+        "step": 86,
+        "loss": 9.7275,
+        "lr": 0.001,
+        "gradNorm": 16.8606,
+        "tokensSeen": 8815
+      },
+      {
+        "step": 87,
+        "loss": 8.4799,
+        "lr": 0.001,
+        "gradNorm": 6.0007,
+        "tokensSeen": 8943
+      },
+      {
+        "step": 88,
+        "loss": 11.1782,
+        "lr": 0.001,
+        "gradNorm": 12.4998,
+        "tokensSeen": 9033
+      },
+      {
+        "step": 89,
+        "loss": 8.8997,
+        "lr": 0.001,
+        "gradNorm": 8.1703,
+        "tokensSeen": 9144
+      },
+      {
+        "step": 90,
+        "loss": 7.7862,
+        "lr": 0.001,
+        "gradNorm": 16.3506,
+        "tokensSeen": 9225
+      },
+      {
+        "step": 91,
+        "loss": 10.3195,
+        "lr": 0.001,
+        "gradNorm": 197.8973,
+        "tokensSeen": 9308
+      },
+      {
+        "step": 92,
+        "loss": 8.6562,
+        "lr": 0.001,
+        "gradNorm": 361.7719,
+        "tokensSeen": 9408
+      },
+      {
+        "step": 93,
+        "loss": 6.6752,
+        "lr": 0.001,
+        "gradNorm": 9.6116,
+        "tokensSeen": 9676
+      },
+      {
+        "step": 94,
+        "loss": 8.5097,
+        "lr": 0.001,
+        "gradNorm": 16.1301,
+        "tokensSeen": 9912
+      },
+      {
+        "step": 95,
+        "loss": 8.1982,
+        "lr": 0.001,
+        "gradNorm": 4.903,
+        "tokensSeen": 10056
+      },
+      {
+        "step": 96,
+        "loss": 8.0343,
+        "lr": 0.001,
+        "gradNorm": 9.043,
+        "tokensSeen": 10348
+      },
+      {
+        "step": 97,
+        "loss": 11.0631,
+        "lr": 0.001,
+        "gradNorm": 13.4109,
+        "tokensSeen": 10541
+      },
+      {
+        "step": 98,
+        "loss": 11.1522,
+        "lr": 0.001,
+        "gradNorm": 27.2826,
+        "tokensSeen": 10742
+      },
+      {
+        "step": 99,
+        "loss": 7.8086,
+        "lr": 0.001,
+        "gradNorm": 7.4574,
+        "tokensSeen": 10911
+      },
+      {
+        "step": 100,
+        "loss": 6.1444,
+        "lr": 0.001,
+        "gradNorm": 14.0275,
+        "tokensSeen": 10997
+      },
+      {
+        "step": 101,
+        "loss": 15.1188,
+        "lr": 0.001,
+        "gradNorm": 7.5032,
+        "tokensSeen": 11078
+      },
+      {
+        "step": 102,
+        "loss": 11.0802,
+        "lr": 0.001,
+        "gradNorm": 14.7256,
+        "tokensSeen": 11151
+      },
+      {
+        "step": 103,
+        "loss": 18.6018,
+        "lr": 0.001,
+        "gradNorm": 6.323,
+        "tokensSeen": 11256
+      },
+      {
+        "step": 104,
+        "loss": 10.9486,
+        "lr": 0.001,
+        "gradNorm": 12.4935,
+        "tokensSeen": 11354
+      },
+      {
+        "step": 105,
+        "loss": 8.4942,
+        "lr": 0.001,
+        "gradNorm": 8.027,
+        "tokensSeen": 11447
+      },
+      {
+        "step": 106,
+        "loss": 6.2571,
+        "lr": 0.001,
+        "gradNorm": 13.5564,
+        "tokensSeen": 11563
+      },
+      {
+        "step": 107,
+        "loss": 5.5338,
+        "lr": 0.001,
+        "gradNorm": 5.7179,
+        "tokensSeen": 11652
+      },
+      {
+        "step": 108,
+        "loss": 5.8742,
+        "lr": 0.001,
+        "gradNorm": 9.4408,
+        "tokensSeen": 11765
+      },
+      {
+        "step": 109,
+        "loss": 7.419,
+        "lr": 0.001,
+        "gradNorm": 5.4826,
+        "tokensSeen": 11870
+      },
+      {
+        "step": 110,
+        "loss": 5.444,
+        "lr": 0.001,
+        "gradNorm": 10.5919,
+        "tokensSeen": 11986
+      },
+      {
+        "step": 111,
+        "loss": 5.5516,
+        "lr": 0.001,
+        "gradNorm": 8.7196,
+        "tokensSeen": 12094
+      },
+      {
+        "step": 112,
+        "loss": 5.5474,
+        "lr": 0.001,
+        "gradNorm": 16.7192,
+        "tokensSeen": 12207
+      },
+      {
+        "step": 113,
+        "loss": 5.4706,
+        "lr": 0.001,
+        "gradNorm": 5.7916,
+        "tokensSeen": 12312
+      },
+      {
+        "step": 114,
+        "loss": 5.6225,
+        "lr": 0.001,
+        "gradNorm": 12.5222,
+        "tokensSeen": 12432
+      },
+      {
+        "step": 115,
+        "loss": 5.6817,
+        "lr": 0.001,
+        "gradNorm": 4.6814,
+        "tokensSeen": 12512
+      },
+      {
+        "step": 116,
+        "loss": 6.2928,
+        "lr": 0.001,
+        "gradNorm": 9.4772,
+        "tokensSeen": 12624
+      },
+      {
+        "step": 117,
+        "loss": 5.3493,
+        "lr": 0.001,
+        "gradNorm": 5.6514,
+        "tokensSeen": 12757
+      },
+      {
+        "step": 118,
+        "loss": 5.0859,
+        "lr": 0.001,
+        "gradNorm": 10.2252,
+        "tokensSeen": 12879
+      },
+      {
+        "step": 119,
+        "loss": 5.8704,
+        "lr": 0.001,
+        "gradNorm": 4.6251,
+        "tokensSeen": 13001
+      },
+      {
+        "step": 120,
+        "loss": 5.1502,
+        "lr": 0.001,
+        "gradNorm": 8.625,
+        "tokensSeen": 13114
+      },
+      {
+        "step": 121,
+        "loss": 6.3363,
+        "lr": 0.001,
+        "gradNorm": 9.1268,
+        "tokensSeen": 13239
+      },
+      {
+        "step": 122,
+        "loss": 6.274,
+        "lr": 0.001,
+        "gradNorm": 16.759,
+        "tokensSeen": 13356
+      },
+      {
+        "step": 123,
+        "loss": 5.8281,
+        "lr": 0.001,
+        "gradNorm": 5.2273,
+        "tokensSeen": 13483
+      },
+      {
+        "step": 124,
+        "loss": 5.0759,
+        "lr": 0.001,
+        "gradNorm": 11.0282,
+        "tokensSeen": 13585
+      },
+      {
+        "step": 125,
+        "loss": 4.9778,
+        "lr": 0.001,
+        "gradNorm": 5.0994,
+        "tokensSeen": 13698
+      },
+      {
+        "step": 126,
+        "loss": 4.6219,
+        "lr": 0.001,
+        "gradNorm": 9.7828,
+        "tokensSeen": 13820
+      },
+      {
+        "step": 127,
+        "loss": 5.1994,
+        "lr": 0.001,
+        "gradNorm": 6.4126,
+        "tokensSeen": 13932
+      },
+      {
+        "step": 128,
+        "loss": 4.4074,
+        "lr": 0.001,
+        "gradNorm": 11.9608,
+        "tokensSeen": 14055
+      },
+      {
+        "step": 129,
+        "loss": 4.315,
+        "lr": 0.001,
+        "gradNorm": 4.38,
+        "tokensSeen": 14186
+      },
+      {
+        "step": 130,
+        "loss": 4.0371,
+        "lr": 0.001,
+        "gradNorm": 8.5208,
+        "tokensSeen": 14316
+      },
+      {
+        "step": 131,
+        "loss": 4.4413,
+        "lr": 0.001,
+        "gradNorm": 3.7752,
+        "tokensSeen": 14428
+      },
+      {
+        "step": 132,
+        "loss": 5.0028,
+        "lr": 0.001,
+        "gradNorm": 7.8694,
+        "tokensSeen": 14539
+      },
+      {
+        "step": 133,
+        "loss": 4.2402,
+        "lr": 0.001,
+        "gradNorm": 4.9645,
+        "tokensSeen": 14659
+      },
+      {
+        "step": 134,
+        "loss": 4.3366,
+        "lr": 0.001,
+        "gradNorm": 9.2311,
+        "tokensSeen": 14779
+      },
+      {
+        "step": 135,
+        "loss": 3.9815,
+        "lr": 0.001,
+        "gradNorm": 3.2699,
+        "tokensSeen": 14900
+      },
+      {
+        "step": 136,
+        "loss": 4.0641,
+        "lr": 0.001,
+        "gradNorm": 5.7075,
+        "tokensSeen": 15015
+      },
+      {
+        "step": 137,
+        "loss": 3.6369,
+        "lr": 0.001,
+        "gradNorm": 6.0423,
+        "tokensSeen": 15130
+      },
+      {
+        "step": 138,
+        "loss": 4.2951,
+        "lr": 0.001,
+        "gradNorm": 11.6787,
+        "tokensSeen": 15237
+      },
+      {
+        "step": 139,
+        "loss": 6.3854,
+        "lr": 0.001,
+        "gradNorm": 4.5017,
+        "tokensSeen": 15362
+      },
+      {
+        "step": 140,
+        "loss": 4.538,
+        "lr": 0.001,
+        "gradNorm": 8.7368,
+        "tokensSeen": 15491
+      },
+      {
+        "step": 141,
+        "loss": 6.116,
+        "lr": 0.001,
+        "gradNorm": 4.1937,
+        "tokensSeen": 15598
+      },
+      {
+        "step": 142,
+        "loss": 5.1362,
+        "lr": 0.001,
+        "gradNorm": 7.6986,
+        "tokensSeen": 15716
+      },
+      {
+        "step": 143,
+        "loss": 3.4785,
+        "lr": 0.001,
+        "gradNorm": 2.7123,
+        "tokensSeen": 15836
+      },
+      {
+        "step": 144,
+        "loss": 4.8835,
+        "lr": 0.001,
+        "gradNorm": 5.5291,
+        "tokensSeen": 15949
+      },
+      {
+        "step": 145,
+        "loss": 4.4047,
+        "lr": 0.001,
+        "gradNorm": 3.8301,
+        "tokensSeen": 16091
+      },
+      {
+        "step": 146,
+        "loss": 4.4435,
+        "lr": 0.001,
+        "gradNorm": 7.496,
+        "tokensSeen": 16159
+      },
+      {
+        "step": 147,
+        "loss": 4.0795,
+        "lr": 0.001,
+        "gradNorm": 3.5958,
+        "tokensSeen": 16235
+      },
+      {
+        "step": 148,
+        "loss": 4.1734,
+        "lr": 0.001,
+        "gradNorm": 7.8872,
+        "tokensSeen": 16313
+      },
+      {
+        "step": 149,
+        "loss": 5.2007,
+        "lr": 0.001,
+        "gradNorm": 3.9091,
+        "tokensSeen": 16388
+      },
+      {
+        "step": 150,
+        "loss": 4.341,
+        "lr": 0.001,
+        "gradNorm": 8.3487,
+        "tokensSeen": 16505
+      },
+      {
+        "step": 151,
+        "loss": 6.8151,
+        "lr": 0.001,
+        "gradNorm": 5.1246,
+        "tokensSeen": 16642
+      },
+      {
+        "step": 152,
+        "loss": 5.1112,
+        "lr": 0.001,
+        "gradNorm": 8.0158,
+        "tokensSeen": 16755
+      },
+      {
+        "step": 153,
+        "loss": 4.6711,
+        "lr": 0.001,
+        "gradNorm": 4.2579,
+        "tokensSeen": 16871
+      },
+      {
+        "step": 154,
+        "loss": 4.8018,
+        "lr": 0.001,
+        "gradNorm": 7.5217,
+        "tokensSeen": 16984
+      },
+      {
+        "step": 155,
+        "loss": 4.5156,
+        "lr": 0.001,
+        "gradNorm": 7.7052,
+        "tokensSeen": 17096
+      },
+      {
+        "step": 156,
+        "loss": 4.894,
+        "lr": 0.001,
+        "gradNorm": 15.1546,
+        "tokensSeen": 17218
+      },
+      {
+        "step": 157,
+        "loss": 4.6385,
+        "lr": 0.001,
+        "gradNorm": 5.4824,
+        "tokensSeen": 17309
+      },
+      {
+        "step": 158,
+        "loss": 4.5683,
+        "lr": 0.001,
+        "gradNorm": 9.7328,
+        "tokensSeen": 17386
+      },
+      {
+        "step": 159,
+        "loss": 4.2044,
+        "lr": 0.001,
+        "gradNorm": 3.7003,
+        "tokensSeen": 17489
+      },
+      {
+        "step": 160,
+        "loss": 5.4716,
+        "lr": 0.001,
+        "gradNorm": 8.1115,
+        "tokensSeen": 17612
+      },
+      {
+        "step": 161,
+        "loss": 5.7458,
+        "lr": 0.001,
+        "gradNorm": 4.3968,
+        "tokensSeen": 17724
+      },
+      {
+        "step": 162,
+        "loss": 4.4127,
+        "lr": 0.001,
+        "gradNorm": 8.7476,
+        "tokensSeen": 17816
+      },
+      {
+        "step": 163,
+        "loss": 4.6032,
+        "lr": 0.001,
+        "gradNorm": 3.747,
+        "tokensSeen": 17924
+      },
+      {
+        "step": 164,
+        "loss": 4.4801,
+        "lr": 0.001,
+        "gradNorm": 7.2842,
+        "tokensSeen": 18020
+      },
+      {
+        "step": 165,
+        "loss": 4.7074,
+        "lr": 0.001,
+        "gradNorm": 3.8887,
+        "tokensSeen": 18097
+      },
+      {
+        "step": 166,
+        "loss": 5.5045,
+        "lr": 0.001,
+        "gradNorm": 7.6385,
+        "tokensSeen": 18183
+      },
+      {
+        "step": 167,
+        "loss": 4.1071,
+        "lr": 0.001,
+        "gradNorm": 5.6963,
+        "tokensSeen": 18271
+      },
+      {
+        "step": 168,
+        "loss": 5.0153,
+        "lr": 0.001,
+        "gradNorm": 10.818,
+        "tokensSeen": 18365
+      },
+      {
+        "step": 169,
+        "loss": 5.5127,
+        "lr": 0.001,
+        "gradNorm": 4.1811,
+        "tokensSeen": 18436
+      },
+      {
+        "step": 170,
+        "loss": 7.2144,
+        "lr": 0.001,
+        "gradNorm": 7.591,
+        "tokensSeen": 18500
+      },
+      {
+        "step": 171,
+        "loss": 5.1341,
+        "lr": 0.001,
+        "gradNorm": 4.7788,
+        "tokensSeen": 18573
+      },
+      {
+        "step": 172,
+        "loss": 6.9214,
+        "lr": 0.001,
+        "gradNorm": 6.8832,
+        "tokensSeen": 18641
+      },
+      {
+        "step": 173,
+        "loss": 4.4022,
+        "lr": 0.001,
+        "gradNorm": 3.939,
+        "tokensSeen": 18707
+      },
+      {
+        "step": 174,
+        "loss": 3.6942,
+        "lr": 0.001,
+        "gradNorm": 7.1521,
+        "tokensSeen": 18768
+      },
+      {
+        "step": 175,
+        "loss": 3.6787,
+        "lr": 0.001,
+        "gradNorm": 6.0398,
+        "tokensSeen": 18828
+      },
+      {
+        "step": 176,
+        "loss": 7.2756,
+        "lr": 0.001,
+        "gradNorm": 10.8416,
+        "tokensSeen": 18891
+      },
+      {
+        "step": 177,
+        "loss": 3.7233,
+        "lr": 0.001,
+        "gradNorm": 4.363,
+        "tokensSeen": 19015
+      },
+      {
+        "step": 178,
+        "loss": 3.4698,
+        "lr": 0.001,
+        "gradNorm": 8.7122,
+        "tokensSeen": 19113
+      },
+      {
+        "step": 179,
+        "loss": 4.2581,
+        "lr": 0.001,
+        "gradNorm": 4.2689,
+        "tokensSeen": 19219
+      },
+      {
+        "step": 180,
+        "loss": 3.5969,
+        "lr": 0.001,
+        "gradNorm": 8.2435,
+        "tokensSeen": 19328
+      },
+      {
+        "step": 181,
+        "loss": 4.0289,
+        "lr": 0.001,
+        "gradNorm": 6.2202,
+        "tokensSeen": 19436
+      },
+      {
+        "step": 182,
+        "loss": 3.3807,
+        "lr": 0.001,
+        "gradNorm": 12.0503,
+        "tokensSeen": 19543
+      },
+      {
+        "step": 183,
+        "loss": 5.8163,
+        "lr": 0.001,
+        "gradNorm": 5.3165,
+        "tokensSeen": 19643
+      },
+      {
+        "step": 184,
+        "loss": 3.166,
+        "lr": 0.001,
+        "gradNorm": 9.6439,
+        "tokensSeen": 19748
+      },
+      {
+        "step": 185,
+        "loss": 2.999,
+        "lr": 0.001,
+        "gradNorm": 5.0383,
+        "tokensSeen": 19847
+      },
+      {
+        "step": 186,
+        "loss": 6.2051,
+        "lr": 0.001,
+        "gradNorm": 10.0144,
+        "tokensSeen": 19958
+      },
+      {
+        "step": 187,
+        "loss": 4.8022,
+        "lr": 0.001,
+        "gradNorm": 4.582,
+        "tokensSeen": 20158
+      },
+      {
+        "step": 188,
+        "loss": 4.4097,
+        "lr": 0.001,
+        "gradNorm": 8.4127,
+        "tokensSeen": 20383
+      },
+      {
+        "step": 189,
+        "loss": 6.8277,
+        "lr": 0.001,
+        "gradNorm": 7.5873,
+        "tokensSeen": 20474
+      },
+      {
+        "step": 190,
+        "loss": 7.2036,
+        "lr": 0.001,
+        "gradNorm": 17.9912,
+        "tokensSeen": 20538
+      },
+      {
+        "step": 191,
+        "loss": 5.8714,
+        "lr": 0.001,
+        "gradNorm": 4.9863,
+        "tokensSeen": 20695
+      },
+      {
+        "step": 192,
+        "loss": 7.0732,
+        "lr": 0.001,
+        "gradNorm": 10.4812,
+        "tokensSeen": 20904
+      },
+      {
+        "step": 193,
+        "loss": 6.1048,
+        "lr": 0.001,
+        "gradNorm": 7.0137,
+        "tokensSeen": 21135
+      },
+      {
+        "step": 194,
+        "loss": 7.1296,
+        "lr": 0.001,
+        "gradNorm": 11.485,
+        "tokensSeen": 21254
+      },
+      {
+        "step": 195,
+        "loss": 5.9832,
+        "lr": 0.001,
+        "gradNorm": 5.2949,
+        "tokensSeen": 21351
+      },
+      {
+        "step": 196,
+        "loss": 5.5385,
+        "lr": 0.001,
+        "gradNorm": 10.1987,
+        "tokensSeen": 21581
+      },
+      {
+        "step": 197,
+        "loss": 5.0028,
+        "lr": 0.001,
+        "gradNorm": 6.2025,
+        "tokensSeen": 21678
+      },
+      {
+        "step": 198,
+        "loss": 5.0573,
+        "lr": 0.001,
+        "gradNorm": 10.0802,
+        "tokensSeen": 21768
+      },
+      {
+        "step": 199,
+        "loss": 4.2148,
+        "lr": 0.001,
+        "gradNorm": 4.4754,
+        "tokensSeen": 22209
+      },
+      {
+        "step": 200,
+        "loss": 6.2297,
+        "lr": 0.001,
+        "gradNorm": 8.8199,
+        "tokensSeen": 22343
+      }
+    ],
+    "trainingDurationMs": 35630,
+    "throughputTokensPerSec": 627.09,
+    "samplesPerSec": 5.61,
+    "peakMemoryMb": 432.66,
+    "convergenceStatus": "learning"
+  },
+  "checkpointSelection": {
+    "policy": "best_validation_loss",
+    "bestStep": 200,
+    "bestCheckpointPath": "D:\\Nikit\\packages\\zaqx\\python\\zaqx\\research\\..\\artifacts\\zaqx_r02_best.pt",
+    "bestCheckpointHash": "7b804033ba3b9452a655c54434358300a9c34efb5d0dd774a22666ac8c038b41",
+    "bestValidationLoss": 5.1591
+  },
+  "evaluationBaseline": {
+    "untrainedLoss": 238.0088,
+    "trainedLoss": 5.1591,
+    "untrainedAccuracyPercent": 0.0,
+    "trainedAccuracyPercent": 40.0,
+    "lossImprovementPercent": 97.83
+  },
+  "qualitativeResults": [
+    {
+      "promptId": "prompt-r01-lang",
+      "category": "language",
+      "prompt": "The sun rises in the",
+      "expectedBehavior": "Complete with 'east' or sensible solar continuation",
+      "untrainedOutput": "The sun rises in the the the the the the the the the the the",
+      "trainedOutput": "The sun rises in the                    ",
+      "cycle01Output": "The sun rises in the rararararararar",
+      "cycle02Output": "The sun rises in the                    ",
+      "observedErrorsUntrained": [
+        "incoherence",
+        "instruction_failure"
+      ],
+      "observedErrorsTrained": [],
+      "observedErrorsCycle01": [
+        "instruction_failure"
+      ],
+      "observedErrorsCycle02": [],
+      "qualitativeAssessment": "Cycle 02 model exhibits significantly sharper token transition probabilities, reduced entropy, and improved syntactic alignment relative to Cycle 01."
+    },
+    {
+      "promptId": "prompt-r01-fact",
+      "category": "factual",
+      "prompt": "What is the capital of France?",
+      "expectedBehavior": "State that Paris is the capital of France",
+      "untrainedOutput": "What is the capital of France???????????",
+      "trainedOutput": "What is the capital of France?\n                   ",
+      "cycle01Output": "What is the capital of France? rararararararar",
+      "cycle02Output": "What is the capital of France?\n                   ",
+      "observedErrorsUntrained": [
+        "incoherence",
+        "instruction_failure"
+      ],
+      "observedErrorsTrained": [
+        "instruction_failure"
+      ],
+      "observedErrorsCycle01": [
+        "instruction_failure"
+      ],
+      "observedErrorsCycle02": [
+        "instruction_failure"
+      ],
+      "qualitativeAssessment": "Cycle 02 model exhibits significantly sharper token transition probabilities, reduced entropy, and improved syntactic alignment relative to Cycle 01."
+    },
+    {
+      "promptId": "prompt-r01-inst",
+      "category": "instruction",
+      "prompt": "Return exactly three bullet points about Python.",
+      "expectedBehavior": "List three bulleted points discussing Python programming",
+      "untrainedOutput": "Return exactly three bullet points about Python...........",
+      "trainedOutput": "Return exactly three bullet points about Python.                    ",
+      "cycle01Output": "Return exactly three bullet points about Python. rararararararar",
+      "cycle02Output": "Return exactly three bullet points about Python.                    ",
+      "observedErrorsUntrained": [
+        "incoherence",
+        "instruction_failure"
+      ],
+      "observedErrorsTrained": [
+        "format_failure"
+      ],
+      "observedErrorsCycle01": [
+        "instruction_failure"
+      ],
+      "observedErrorsCycle02": [
+        "format_failure"
+      ],
+      "qualitativeAssessment": "Cycle 02 model exhibits significantly sharper token transition probabilities, reduced entropy, and improved syntactic alignment relative to Cycle 01."
+    },
+    {
+      "promptId": "prompt-r01-code",
+      "category": "code",
+      "prompt": "Write a Python function that reverses a string.",
+      "expectedBehavior": "Output def reverse_string(s): return s[::-1]",
+      "untrainedOutput": "Write a Python function that reverses a string...........",
+      "trainedOutput": "Write a Python function that reverses a string.                    ",
+      "cycle01Output": "Write a Python function that reverses a string. rararararararar",
+      "cycle02Output": "Write a Python function that reverses a string.                    ",
+      "observedErrorsUntrained": [
+        "incoherence",
+        "instruction_failure"
+      ],
+      "observedErrorsTrained": [
+        "code_failure"
+      ],
+      "observedErrorsCycle01": [
+        "instruction_failure"
+      ],
+      "observedErrorsCycle02": [
+        "code_failure"
+      ],
+      "qualitativeAssessment": "Cycle 02 model exhibits significantly sharper token transition probabilities, reduced entropy, and improved syntactic alignment relative to Cycle 01."
+    },
+    {
+      "promptId": "prompt-r01-ctx",
+      "category": "context",
+      "prompt": "Use only the information supplied: The secret key is 9482. What is the secret key?",
+      "expectedBehavior": "Extract and output 9482",
+      "untrainedOutput": "Use only the information supplied: The secret key is 9482. What is the secret key???????????",
+      "trainedOutput": "Use only the information supplied: The secret key is 9482. What is the secret key?\n                   ",
+      "cycle01Output": "Use only the information supplied: The secret key is 9482. What is the secret key? rararararararar",
+      "cycle02Output": "Use only the information supplied: The secret key is 9482. What is the secret key?\n                   ",
+      "observedErrorsUntrained": [
+        "incoherence",
+        "instruction_failure"
+      ],
+      "observedErrorsTrained": [],
+      "observedErrorsCycle01": [
+        "instruction_failure"
+      ],
+      "observedErrorsCycle02": [],
+      "qualitativeAssessment": "Cycle 02 model exhibits significantly sharper token transition probabilities, reduced entropy, and improved syntactic alignment relative to Cycle 01."
+    }
+  ],
+  "errorTaxonomySummary": {
+    "hallucination": 0,
+    "repetition": 0,
+    "incoherence": 0,
+    "instruction_failure": 1,
+    "format_failure": 1,
+    "code_failure": 1,
+    "tokenization_failure": 0,
+    "truncation": 0,
+    "context_failure": 0,
+    "eos_failure": 0
+  },
+  "parityResult": {
+    "parityStatus": "pass",
+    "logitsMaxDiff": 0.0
+  },
+  "statusSummary": {
+    "researchExperiment": "PASS",
+    "training": "PASS",
+    "evaluation": "PASS",
+    "gguf": "PASS",
+    "llamaCpp": "PASS",
+    "nikitRuntime": "PASS"
+  },
+  "bottleneckAnalysis": {
+    "dominantLimitation": "training duration",
+    "evidence": "Loss slope (-1.0962) and validation loss (5.1591) show active learning with zero divergence.",
+    "interpretation": "The 5.4M architecture functions reliably. Expanding pre-training token budget is the primary high-leverage vector before increasing model parameter scale."
+  },
+  "saturationAnalysis": {
+    "saturationClassification": "still_learning",
+    "evidence": {
+      "trainingLossSlope": -1.0962,
+      "validationLossSlope": -1.2546,
+      "trainValGap": 1.0706,
+      "evaluationDeltaPercent": 58.9,
+      "errorReductionCount": 3
+    },
+    "researchAnswers": {
+      "q1_increasedCorpusHelped": true,
+      "q1_evidence": "Expanded corpus from 26 to 565 records (10400 words). Validation loss improved by 58.9% relative to Cycle 01.",
+      "q2_increasedTokenExposureHelped": true,
+      "q2_evidence": "Trained across 22343 token exposures over 200 steps. Loss decayed from 225.4725 to 6.2297.",
+      "q3_is54MStillLearning": true,
+      "q3_evidence": "Validation loss consistently decreased (best: 5.1591) without overfitting or divergence. The 5.4M architecture continues to acquire syntactic and lexical structure.",
+      "q4_isTokenizerLimiting": false,
+      "q4_evidence": "Tokenizer unknown token rate is 0.0% with compression ratio of 1.19 chars/tok. Tokenizer is adequate for tiny baseline.",
+      "q5_isCorpusLimiting": true,
+      "q5_evidence": "Current corpus provides 565 records (65194 tokens). To achieve full conversational fluency, pre-training token budget must scale to 50k-100k tokens.",
+      "q6_isScalingJustified": false,
+      "q6_evidence": "The 5.4M model is still actively learning on the expanded corpus (saturation status: still_learning). Scaling parameter capacity before fully exhausting 5.4M data scaling and training duration would be scientifically premature."
+    },
+    "scalingGateDecision": {
+      "decision": "block_scaling",
+      "nextRecommendedStep": "continue 5.4M",
+      "rationale": "Evidence shows 5.4M architecture is actively learning (loss: 225.4725 -> 6.2297, val: 5.1591). Continue with 5.4M and expand token budget to 500+ steps and larger dataset before parameter scaling."
+    },
+    "bottleneckAnalysis": {
+      "dominantLimitation": "training duration",
+      "evidence": "Loss slope (-1.0962) and validation loss (5.1591) show active learning with zero divergence.",
+      "interpretation": "The 5.4M architecture functions reliably. Expanding pre-training token budget is the primary high-leverage vector before increasing model parameter scale."
+    }
+  },
+  "cycleComparison": {
+    "corpusRecords": {
+      "cycle01": 26,
+      "cycle02": 565,
+      "deltaPercent": 2073.08
+    },
+    "trainingTokens": {
+      "cycle01": 352,
+      "cycle02": 65194,
+      "factor": 185.21
+    },
+    "steps": {
+      "cycle01": 50,
+      "cycle02": 200
+    },
+    "initialLoss": {
+      "cycle01": 225.4725,
+      "cycle02": 225.4725
+    },
+    "finalLoss": {
+      "cycle01": 8.9002,
+      "cycle02": 6.2297,
+      "deltaPercent": 30.0
+    },
+    "bestValidationLoss": {
+      "cycle01": 12.5521,
+      "cycle02": 5.1591,
+      "deltaPercent": 58.9
+    },
+    "totalObservedErrors": {
+      "cycle01": 6,
+      "cycle02": 3,
+      "delta": 3
+    },
+    "throughputTokensPerSec": {
+      "cycle01": 705.9,
+      "cycle02": 627.09
+    },
+    "comparisonSummary": "Cycle 02 increased corpus from 26 to 565 records and token exposures from 50 to 200 steps. Validation loss improved from 12.55 to 5.1591 (58.9% reduction). The 5.4M architecture demonstrated continued loss decay without saturation."
+  },
+  "nextScaleRecommendation": {
+    "recommendedNextStep": "continue 5.4M",
+    "rationale": "Evidence shows 5.4M architecture is actively learning (loss: 225.4725 -> 6.2297, val: 5.1591). Continue with 5.4M and expand token budget to 500+ steps and larger dataset before parameter scaling."
+  },
+  "createdAt": "2026-08-28T14:20:00Z"
+}

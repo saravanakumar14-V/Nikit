@@ -1,0 +1,60 @@
+.container {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--nikit-space-2);
+  color: var(--nikit-text-secondary);
+  font-family: var(--nikit-font-sans);
+}
+
+.spinner {
+  animation: spin 800ms linear infinite;
+  flex-shrink: 0;
+}
+
+.track {
+  opacity: 0.15;
+}
+
+.head {
+  color: var(--nikit-accent-base);
+}
+
+.sm {
+  width: 14px;
+  height: 14px;
+}
+
+.md {
+  width: 20px;
+  height: 20px;
+}
+
+.lg {
+  width: 28px;
+  height: 28px;
+}
+
+.label {
+  font-size: var(--nikit-text-xs);
+  color: var(--nikit-text-secondary);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

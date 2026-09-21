@@ -1,0 +1,104 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--nikit-space-1-5);
+  font-family: var(--nikit-font-sans);
+  font-weight: var(--nikit-weight-medium);
+  letter-spacing: var(--nikit-tracking-tight);
+  border-radius: var(--nikit-radius-full);
+  border: 1px solid transparent;
+  white-space: nowrap;
+  user-select: none;
+  line-height: var(--nikit-leading-none);
+}
+
+/* SIZES */
+.sm {
+  padding: 2px var(--nikit-space-2);
+  font-size: var(--nikit-text-2xs);
+}
+
+.md {
+  padding: 3px var(--nikit-space-2-5);
+  font-size: var(--nikit-text-xs);
+}
+
+/* VARIANTS */
+.default {
+  background-color: var(--nikit-bg-surface-raised);
+  color: var(--nikit-text-secondary);
+  border-color: var(--nikit-border-default);
+}
+
+.accent {
+  background-color: var(--nikit-accent-subtle);
+  color: var(--nikit-accent-hover);
+  border-color: rgba(59, 130, 246, 0.25);
+}
+
+.success {
+  background-color: var(--nikit-success-subtle);
+  color: var(--nikit-success-text);
+  border-color: var(--nikit-success-border);
+}
+
+.warning {
+  background-color: var(--nikit-warning-subtle);
+  color: var(--nikit-warning-text);
+  border-color: var(--nikit-warning-border);
+}
+
+.danger {
+  background-color: var(--nikit-danger-subtle);
+  color: var(--nikit-danger-text);
+  border-color: var(--nikit-danger-border);
+}
+
+.local {
+  background-color: var(--nikit-success-subtle);
+  color: var(--nikit-success-text);
+  border-color: var(--nikit-success-border);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.15);
+}
+
+/* DOT */
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--nikit-radius-full);
+  background-color: currentColor;
+  flex-shrink: 0;
+}
+
+.pulse {
+  animation: pulseDot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.85);
+  }
+}
+
+.removeButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: inherit;
+  opacity: 0.6;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 2px;
+  border-radius: var(--nikit-radius-full);
+}
+
+.removeButton:hover {
+  opacity: 1;
+}

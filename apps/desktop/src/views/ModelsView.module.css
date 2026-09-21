@@ -1,0 +1,245 @@
+.viewContainer {
+  padding: 32px 40px;
+  max-width: 1120px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.viewHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.badgeRow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.viewTitle {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--nikit-text-primary);
+  margin: 4px 0 0 0;
+}
+
+.viewDescription {
+  font-size: 14px;
+  color: var(--nikit-text-secondary);
+  line-height: 1.55;
+  max-width: 760px;
+  margin: 0;
+}
+
+/* Runtime Info Banner */
+.runtimeBanner {
+  background-color: var(--nikit-surface-raised);
+  border: 1px solid var(--nikit-border-subtle);
+  border-radius: var(--nikit-radius-lg);
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.runtimeInfoLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.runtimeIconBox {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--nikit-radius-md);
+  background-color: var(--nikit-surface-sunken);
+  color: var(--nikit-accent-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--nikit-border-subtle);
+}
+
+.runtimeDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.runtimeTitle {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--nikit-text-primary);
+}
+
+.runtimeMeta {
+  font-size: 12.5px;
+  color: var(--nikit-text-tertiary);
+  font-family: var(--nikit-font-mono);
+}
+
+/* Section Header */
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--nikit-text-primary);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+/* Model Cards Grid */
+.modelGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .modelGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.modelCard {
+  background-color: var(--nikit-surface-raised);
+  border: 1px solid var(--nikit-border-subtle);
+  border-radius: var(--nikit-radius-lg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: all var(--nikit-duration-fast) var(--nikit-ease-default);
+}
+
+.modelCard:hover {
+  border-color: var(--nikit-border-base);
+  box-shadow: var(--nikit-shadow-sm);
+}
+
+.modelCardActive {
+  border-color: var(--nikit-accent-base);
+  box-shadow: 0 0 0 1px var(--nikit-accent-base);
+}
+
+.modelCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.modelName {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--nikit-text-primary);
+}
+
+.modelCardDesc {
+  font-size: 13px;
+  color: var(--nikit-text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.modelSpecTable {
+  background-color: var(--nikit-surface-sunken);
+  border-radius: var(--nikit-radius-md);
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+  border: 1px solid var(--nikit-border-subtle);
+}
+
+.specRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--nikit-text-tertiary);
+}
+
+.specVal {
+  color: var(--nikit-text-primary);
+  font-weight: 500;
+  font-family: var(--nikit-font-mono);
+}
+
+.capabilityRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.capabilityBadge {
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: var(--nikit-radius-sm);
+  background-color: var(--nikit-surface-sunken);
+  color: var(--nikit-text-secondary);
+  border: 1px solid var(--nikit-border-subtle);
+}
+
+/* Providers List */
+.providersGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 900px) {
+  .providersGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.providerCard {
+  background-color: var(--nikit-surface-raised);
+  border: 1px solid var(--nikit-border-subtle);
+  border-radius: var(--nikit-radius-md);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.providerCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.providerName {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--nikit-text-primary);
+}
+
+.providerStatusMsg {
+  font-size: 11.5px;
+  color: var(--nikit-text-tertiary);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,36 @@
+.horizontal {
+  height: 1px;
+  width: 100%;
+  background-color: var(--nikit-border-subtle);
+  margin: var(--nikit-space-3) 0;
+}
+
+.vertical {
+  width: 1px;
+  align-self: stretch;
+  background-color: var(--nikit-border-subtle);
+  margin: 0 var(--nikit-space-3);
+}
+
+.withLabel {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: var(--nikit-space-4) 0;
+  gap: var(--nikit-space-3);
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: var(--nikit-border-subtle);
+}
+
+.label {
+  font-family: var(--nikit-font-sans);
+  font-size: var(--nikit-text-2xs);
+  font-weight: var(--nikit-weight-medium);
+  color: var(--nikit-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: var(--nikit-tracking-wider);
+}

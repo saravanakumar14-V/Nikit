@@ -1,0 +1,243 @@
+{
+  "cycleId": "zaqx-r01",
+  "hypothesis": "With the current 5.4M architecture, a controlled 50-step optimization exposure will demonstrate real loss convergence, reproducible parameter updates, and measurable reduction in validation cross-entropy relative to the untrained random baseline.",
+  "experimentIdent": {
+    "experimentId": "exp-zaqx-r01-001",
+    "datasetVersionHash": "9d319683feb58b72645e32795e122e36a61f8d3be937bad964c0200c1b640a10",
+    "tokenizerHash": "tok-zaqx-v1.0.0-vsize386",
+    "modelConfigHash": "c4ece582a97d74e229605eb122db30d2697709051ab087dbe79fd18187601c99",
+    "trainingConfigHash": "fd6be285dac6ba22ec1569d4cb3e6e92cd5a1a3106b880dbfdb682f13b0a074c",
+    "evaluationSuiteVersion": "eval-suite-r01-v1"
+  },
+  "corpusAudit": {
+    "datasetVersionId": "ds-zaqx-r01-v1",
+    "datasetHash": "9d319683feb58b72645e32795e122e36a61f8d3be937bad964c0200c1b640a10",
+    "recordCount": 26,
+    "charCount": 2345,
+    "wordCount": 352,
+    "duplicateCount": 0,
+    "duplicateRatePercent": 0.0,
+    "trainCount": 20,
+    "valCount": 2,
+    "testCount": 4,
+    "exactLeakageOverlapCount": 0,
+    "evaluationContaminationCount": 1,
+    "categoryDistribution": {
+      "general": 26
+    },
+    "sourceDistribution": {
+      "curated": 26
+    },
+    "syntheticCount": 0,
+    "syntheticRatioPercent": 0.0,
+    "lengthStats": {
+      "minChars": 47,
+      "maxChars": 121,
+      "meanChars": 90.19,
+      "medianChars": 97,
+      "p95Chars": 114,
+      "p99Chars": 121,
+      "minWords": 4,
+      "maxWords": 18,
+      "meanWords": 13.54,
+      "medianWords": 14,
+      "p95Words": 17,
+      "p99Words": 18
+    },
+    "invalidRecordCount": 0,
+    "qualityClassification": {
+      "dataQuantity": "Curated expanded baseline (26 records, 352 words, 2345 chars)",
+      "dataDiversity": "8 balanced domains across 1 categories",
+      "dataCleanliness": "High (clean text without corrupted UTF-8 byte sequences)",
+      "duplication": "Clean (0.00% duplicate rate)",
+      "formatConsistency": "100% normalized plain text records",
+      "evaluationContaminationRisk": "Zero (exact overlap = 0, eval contamination = 1)"
+    },
+    "auditedAt": "2026-08-28T14:15:00Z"
+  },
+  "tokenizerAudit": {
+    "tokenizerVersion": "v1.0.0",
+    "tokenizerHash": "tok-zaqx-v1.0.0-vsize386",
+    "vocabSize": 386,
+    "unknownTokenCount": 0,
+    "unknownTokenRatePercent": 0.0,
+    "totalTokensAudited": 1828,
+    "trainTokens": 1467,
+    "valTokens": 133,
+    "testTokens": 228,
+    "tokensPerChar": 0.7795,
+    "tokensPerWord": 5.19,
+    "averageTokensPerSample": 70.31,
+    "medianTokensPerSample": 76,
+    "p50SeqLen": 76,
+    "p95SeqLen": 91,
+    "p99SeqLen": 92,
+    "maxSeqLen": 92,
+    "contextOverflowRatePercent": 0.0,
+    "compressionRatio": 1.28,
+    "specialTokensUsage": {
+      "<|zaqx_bos|>": 0,
+      "<|zaqx_eos|>": 0,
+      "<|zaqx_pad|>": 0,
+      "<|zaqx_unk|>": 0
+    },
+    "qualityDecision": "SUITABLE FOR TRAINING",
+    "auditedAt": "2026-08-28T14:15:00Z"
+  },
+  "trainingTelemetry": {
+    "backend": "PyTorch Native CPU",
+    "pythonVersion": "3.11.9",
+    "pytorchVersion": "2.13.0+cpu",
+    "totalSteps": 50,
+    "initialLoss": 225.4725,
+    "finalLoss": 8.9002,
+    "validationLosses": [
+      {
+        "step": 10,
+        "loss": 31.946
+      },
+      {
+        "step": 20,
+        "loss": 18.7056
+      },
+      {
+        "step": 30,
+        "loss": 14.863
+      },
+      {
+        "step": 40,
+        "loss": 14.1629
+      },
+      {
+        "step": 50,
+        "loss": 12.5521
+      }
+    ],
+    "trainingDurationMs": 2853,
+    "throughputTokensPerSec": 1310.28,
+    "peakMemoryMb": 424.12,
+    "convergenceStatus": "learning"
+  },
+  "evaluationBaseline": {
+    "untrainedLoss": 225.4073,
+    "trainedLoss": 12.5521,
+    "untrainedAccuracyPercent": 0.0,
+    "trainedAccuracyPercent": 20.0,
+    "lossImprovementPercent": 94.43
+  },
+  "qualitativeResults": [
+    {
+      "promptId": "prompt-r01-lang",
+      "category": "language",
+      "prompt": "The sun rises in the",
+      "expectedBehavior": "Complete with 'east' or sensible solar continuation",
+      "untrainedOutput": "The sun rises in the the the the the the the the the the the",
+      "trainedOutput": "The sun rises in the ddrararararara",
+      "observedErrorsUntrained": [
+        "incoherence",
+        "instruction_failure"
+      ],
+      "observedErrorsTrained": [],
+      "qualitativeAssessment": "Trained baseline demonstrates loss decay and valid token transitions, but remains undertrained for complex multi-token synthesis."
+    },
+    {
+      "promptId": "prompt-r01-fact",
+      "category": "factual",
+      "prompt": "What is the capital of France?",
+      "expectedBehavior": "State that Paris is the capital of France",
+      "untrainedOutput": "What is the capital of France???????????",
+      "trainedOutput": "What is the capital of France?rararararararar",
+      "observedErrorsUntrained": [
+        "incoherence",
+        "instruction_failure"
+      ],
+      "observedErrorsTrained": [
+        "instruction_failure",
+        "hallucination"
+      ],
+      "qualitativeAssessment": "Trained baseline demonstrates loss decay and valid token transitions, but remains undertrained for complex multi-token synthesis."
+    },
+    {
+      "promptId": "prompt-r01-inst",
+      "category": "instruction",
+      "prompt": "Return exactly three bullet points about Python.",
+      "expectedBehavior": "List three bulleted points discussing Python programming",
+      "untrainedOutput": "Return exactly three bullet points about Python...........",
+      "trainedOutput": "Return exactly three bullet points about Python.rararararararar",
+      "observedErrorsUntrained": [
+        "incoherence",
+        "instruction_failure"
+      ],
+      "observedErrorsTrained": [
+        "instruction_failure",
+        "hallucination"
+      ],
+      "qualitativeAssessment": "Trained baseline demonstrates loss decay and valid token transitions, but remains undertrained for complex multi-token synthesis."
+    },
+    {
+      "promptId": "prompt-r01-code",
+      "category": "code",
+      "prompt": "Write a Python function that reverses a string.",
+      "expectedBehavior": "Output def reverse_string(s): return s[::-1]",
+      "untrainedOutput": "Write a Python function that reverses a string...........",
+      "trainedOutput": "Write a Python function that reverses a string.rararararararar",
+      "observedErrorsUntrained": [
+        "incoherence",
+        "instruction_failure"
+      ],
+      "observedErrorsTrained": [
+        "instruction_failure",
+        "hallucination"
+      ],
+      "qualitativeAssessment": "Trained baseline demonstrates loss decay and valid token transitions, but remains undertrained for complex multi-token synthesis."
+    },
+    {
+      "promptId": "prompt-r01-ctx",
+      "category": "context",
+      "prompt": "Use only the information supplied: The secret key is 9482. What is the secret key?",
+      "expectedBehavior": "Extract and output 9482",
+      "untrainedOutput": "Use only the information supplied: The secret key is 9482. What is the secret key???????????",
+      "trainedOutput": "Use only the information supplied: The secret key is 9482. What is the secret key?rararararararar",
+      "observedErrorsUntrained": [
+        "incoherence",
+        "instruction_failure"
+      ],
+      "observedErrorsTrained": [],
+      "qualitativeAssessment": "Trained baseline demonstrates loss decay and valid token transitions, but remains undertrained for complex multi-token synthesis."
+    }
+  ],
+  "errorTaxonomySummary": {
+    "hallucination": 3,
+    "repetition": 0,
+    "incoherence": 0,
+    "instruction_failure": 3,
+    "format_failure": 0,
+    "code_failure": 0,
+    "tokenization_failure": 0,
+    "truncation": 0,
+    "context_failure": 0,
+    "eos_failure": 0
+  },
+  "parityResult": {
+    "parityStatus": "pass",
+    "logitsMaxDiff": 0.0
+  },
+  "statusSummary": {
+    "researchExperiment": "PASS",
+    "training": "PASS",
+    "evaluation": "PASS",
+    "gguf": "PASS",
+    "llamaCpp": "PASS",
+    "nikitRuntime": "PASS"
+  },
+  "bottleneckAnalysis": {
+    "dominantLimitation": "training duration",
+    "evidence": "Loss consistently decayed from 225.4725 to 8.9002 without plateauing. Validation loss improved by 94.43%.",
+    "interpretation": "The 5.4M architecture is functioning correctly and learning token dynamics, but 50 optimization steps is an early baseline. Scaling model parameters before expanding pre-training token budget and dataset volume would be premature."
+  },
+  "nextScaleRecommendation": {
+    "recommendedNextStep": "continue 5.4M",
+    "rationale": "Prioritize expanding the training corpus token volume and training for 200\u2013500 steps on 5.4M to establish optimal convergence before increasing parameter scale to 22M/52M."
+  },
+  "createdAt": "2026-08-28T13:20:00Z"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "modelScale": "experimental-tiny",
+  "calculatedParams": 5401856,
+  "actualPyTorchParams": 5401856,
+  "pythonVersion": "3.11.9",
+  "pytorchVersion": "2.13.0+cpu",
+  "initialLoss": 221.4386,
+  "finalLoss": 33.3767,
+  "evaluationLoss": 31.3651,
+  "checkpointPath": "D:\\Nikit\\packages\\zaqx\\python\\artifacts\\zaqx_tiny_checkpoint.pt",
+  "checkpointSizeBytes": 64893869,
+  "checkpointHash": "f3add22b3bd0309b11ccd44b3da0b8dd4f8a603954376727f8521889bcf2892e",
+  "cudaAvailable": false
+}

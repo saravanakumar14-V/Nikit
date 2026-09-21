@@ -1,0 +1,205 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--nikit-z-dialog);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 15vh;
+  padding-left: var(--nikit-space-4);
+  padding-right: var(--nikit-space-4);
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(9, 10, 12, 0.75);
+  backdrop-filter: blur(8px);
+}
+
+.palette {
+  position: relative;
+  width: 100%;
+  max-width: var(--nikit-command-max-width);
+  background-color: var(--nikit-bg-surface-raised);
+  border: 1px solid var(--nikit-border-strong);
+  border-radius: var(--nikit-radius-xl);
+  box-shadow: var(--nikit-shadow-xl), var(--nikit-shadow-inner-bevel);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--nikit-font-sans);
+  animation: paletteIn var(--nikit-duration-fast) var(--nikit-ease-default);
+}
+
+.searchHeader {
+  display: flex;
+  align-items: center;
+  padding: var(--nikit-space-3-5) var(--nikit-space-4);
+  border-bottom: 1px solid var(--nikit-border-subtle);
+  gap: var(--nikit-space-3);
+  background-color: var(--nikit-bg-surface);
+}
+
+.searchIcon {
+  color: var(--nikit-text-tertiary);
+  flex-shrink: 0;
+}
+
+.input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: var(--nikit-text-base);
+  color: var(--nikit-text-primary);
+}
+
+.input::placeholder {
+  color: var(--nikit-text-tertiary);
+}
+
+.escBadge {
+  font-family: var(--nikit-font-mono);
+  font-size: var(--nikit-text-2xs);
+  color: var(--nikit-text-tertiary);
+  background-color: var(--nikit-bg-surface-raised);
+  border: 1px solid var(--nikit-border-default);
+  padding: 2px var(--nikit-space-1-5);
+  border-radius: var(--nikit-radius-xs);
+}
+
+.listContainer {
+  max-height: 340px;
+  overflow-y: auto;
+  padding: var(--nikit-space-2);
+}
+
+.group {
+  margin-bottom: var(--nikit-space-2);
+}
+
+.groupHeader {
+  font-size: var(--nikit-text-2xs);
+  font-weight: var(--nikit-weight-semibold);
+  color: var(--nikit-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: var(--nikit-tracking-wider);
+  padding: var(--nikit-space-2) var(--nikit-space-3) var(--nikit-space-1);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--nikit-space-2-5) var(--nikit-space-3);
+  border-radius: var(--nikit-radius-md);
+  cursor: pointer;
+  transition: background-color var(--nikit-duration-instant) var(--nikit-ease-default);
+}
+
+.item.selected {
+  background-color: var(--nikit-bg-hover);
+}
+
+.item.disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.itemContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.itemTitle {
+  font-size: var(--nikit-text-sm);
+  color: var(--nikit-text-primary);
+  font-weight: var(--nikit-weight-medium);
+}
+
+.itemDescription {
+  font-size: var(--nikit-text-xs);
+  color: var(--nikit-text-tertiary);
+}
+
+.itemRight {
+  display: flex;
+  align-items: center;
+  gap: var(--nikit-space-2);
+  flex-shrink: 0;
+}
+
+.shortcut {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.kbdKey {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  background-color: var(--nikit-bg-surface);
+  border: 1px solid var(--nikit-border-default);
+  border-radius: var(--nikit-radius-xs);
+  font-family: var(--nikit-font-mono);
+  font-size: var(--nikit-text-2xs);
+  color: var(--nikit-text-secondary);
+}
+
+.enterHint {
+  color: var(--nikit-text-tertiary);
+  opacity: 0;
+  transition: opacity var(--nikit-duration-instant) var(--nikit-ease-default);
+}
+
+.item.selected .enterHint {
+  opacity: 1;
+}
+
+.emptyState {
+  padding: var(--nikit-space-8) var(--nikit-space-4);
+  text-align: center;
+  font-size: var(--nikit-text-xs);
+  color: var(--nikit-text-tertiary);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--nikit-space-2-5) var(--nikit-space-4);
+  border-top: 1px solid var(--nikit-border-subtle);
+  background-color: var(--nikit-bg-surface);
+  font-size: var(--nikit-text-2xs);
+  color: var(--nikit-text-tertiary);
+}
+
+.footerHints {
+  display: flex;
+  align-items: center;
+  gap: var(--nikit-space-4);
+}
+
+.brandHint {
+  font-family: var(--nikit-font-mono);
+  color: var(--nikit-text-disabled);
+}
+
+@keyframes paletteIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

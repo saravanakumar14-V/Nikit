@@ -1,0 +1,99 @@
+.container {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--nikit-space-1-5);
+  font-family: var(--nikit-font-sans);
+  text-align: left;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.label {
+  font-size: var(--nikit-text-xs);
+  font-weight: var(--nikit-weight-medium);
+  color: var(--nikit-text-secondary);
+  letter-spacing: var(--nikit-tracking-tight);
+}
+
+.wrapper {
+  position: relative;
+  background-color: var(--nikit-bg-surface);
+  border: 1px solid var(--nikit-border-default);
+  border-radius: var(--nikit-radius-md);
+  box-shadow: var(--nikit-shadow-inner-bevel);
+  transition: border-color var(--nikit-duration-fast) var(--nikit-ease-default),
+              background-color var(--nikit-duration-fast) var(--nikit-ease-default),
+              box-shadow var(--nikit-duration-fast) var(--nikit-ease-default);
+  padding: var(--nikit-space-2-5) var(--nikit-space-3);
+}
+
+.wrapper:hover:not(.disabled) {
+  border-color: var(--nikit-border-hover);
+  background-color: var(--nikit-bg-surface-raised);
+}
+
+.wrapper:focus-within {
+  border-color: var(--nikit-border-focus);
+  box-shadow: 0 0 0 1px var(--nikit-border-focus), var(--nikit-shadow-glow);
+  background-color: var(--nikit-bg-surface-raised);
+}
+
+.wrapper.hasError {
+  border-color: var(--nikit-danger-base);
+}
+
+.wrapper.hasError:focus-within {
+  box-shadow: 0 0 0 1px var(--nikit-danger-base), 0 0 12px var(--nikit-danger-subtle);
+}
+
+.wrapper.disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  background-color: var(--nikit-bg-disabled);
+}
+
+.textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: var(--nikit-text-sm);
+  color: var(--nikit-text-primary);
+  line-height: var(--nikit-leading-normal);
+  resize: vertical;
+  min-height: 48px;
+}
+
+.textarea::placeholder {
+  color: var(--nikit-text-tertiary);
+}
+
+.textarea:disabled {
+  cursor: not-allowed;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--nikit-space-2);
+}
+
+.errorText {
+  font-size: var(--nikit-text-xs);
+  color: var(--nikit-danger-text);
+}
+
+.helperText {
+  font-size: var(--nikit-text-xs);
+  color: var(--nikit-text-tertiary);
+}
+
+.counter {
+  font-size: var(--nikit-text-2xs);
+  color: var(--nikit-text-tertiary);
+  font-family: var(--nikit-font-mono);
+}

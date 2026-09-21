@@ -1,0 +1,105 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--nikit-space-8) var(--nikit-space-4);
+  max-width: var(--nikit-reading-width);
+  margin: 0 auto;
+  font-family: var(--nikit-font-sans);
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--nikit-radius-xl);
+  background-color: var(--nikit-bg-surface-raised);
+  border: 1px solid var(--nikit-border-default);
+  color: var(--nikit-text-secondary);
+  margin-bottom: var(--nikit-space-4);
+  box-shadow: var(--nikit-shadow-sm);
+}
+
+.title {
+  margin: 0 0 var(--nikit-space-2) 0;
+  font-size: var(--nikit-text-2xl);
+  font-weight: var(--nikit-weight-semibold);
+  letter-spacing: var(--nikit-tracking-tight);
+  color: var(--nikit-text-primary);
+}
+
+.description {
+  margin: 0 0 var(--nikit-space-6) 0;
+  font-size: var(--nikit-text-base);
+  color: var(--nikit-text-tertiary);
+  max-width: 520px;
+  line-height: var(--nikit-leading-relaxed);
+}
+
+.suggestionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--nikit-space-3);
+  width: 100%;
+  margin-bottom: var(--nikit-space-6);
+}
+
+.suggestionCard {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--nikit-space-3);
+  padding: var(--nikit-space-3-5) var(--nikit-space-4);
+  background-color: var(--nikit-bg-surface);
+  border: 1px solid var(--nikit-border-subtle);
+  border-radius: var(--nikit-radius-lg);
+  cursor: pointer;
+  text-align: left;
+  transition: background-color var(--nikit-duration-fast) var(--nikit-ease-default),
+              border-color var(--nikit-duration-fast) var(--nikit-ease-default),
+              transform var(--nikit-duration-instant) var(--nikit-ease-default);
+}
+
+.suggestionCard:hover {
+  background-color: var(--nikit-bg-surface-raised);
+  border-color: var(--nikit-border-hover);
+  transform: translateY(-1px);
+}
+
+.suggestionCard:active {
+  transform: translateY(0);
+}
+
+.suggestionCard:focus-visible {
+  outline: 2px solid var(--nikit-accent-base);
+}
+
+.suggestionIcon {
+  display: inline-flex;
+  color: var(--nikit-text-tertiary);
+  margin-top: 2px;
+}
+
+.suggestionText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.suggestionTitle {
+  font-size: var(--nikit-text-sm);
+  font-weight: var(--nikit-weight-medium);
+  color: var(--nikit-text-primary);
+}
+
+.suggestionSubtitle {
+  font-size: var(--nikit-text-xs);
+  color: var(--nikit-text-tertiary);
+}
+
+.action {
+  margin-top: var(--nikit-space-2);
+}

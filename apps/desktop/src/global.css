@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--nikit-bg-canvas);
+  color: var(--nikit-text-primary);
+  font-family: var(--nikit-font-sans);
+  font-size: 14px;
+  line-height: var(--nikit-leading-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom quiet scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--nikit-border-default);
+  border-radius: var(--nikit-radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--nikit-border-hover);
+}

@@ -1,0 +1,94 @@
+.avatarWrapper {
+  display: inline-flex;
+  position: relative;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--nikit-radius-full);
+  background-color: var(--nikit-bg-surface-elevated);
+  border: 1px solid var(--nikit-border-default);
+  color: var(--nikit-text-primary);
+  font-family: var(--nikit-font-sans);
+  font-weight: var(--nikit-weight-semibold);
+  overflow: hidden;
+  box-shadow: var(--nikit-shadow-sm);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.initials {
+  line-height: var(--nikit-leading-none);
+  letter-spacing: var(--nikit-tracking-wide);
+}
+
+/* SIZES */
+.xs {
+  width: 20px;
+  height: 20px;
+  font-size: 9px;
+}
+
+.sm {
+  width: 28px;
+  height: 28px;
+  font-size: var(--nikit-text-2xs);
+}
+
+.md {
+  width: 36px;
+  height: 36px;
+  font-size: var(--nikit-text-xs);
+}
+
+.lg {
+  width: 44px;
+  height: 44px;
+  font-size: var(--nikit-text-sm);
+}
+
+.xl {
+  width: 56px;
+  height: 56px;
+  font-size: var(--nikit-text-base);
+}
+
+/* STATUS DOTS */
+.statusDot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 25%;
+  height: 25%;
+  min-width: 8px;
+  min-height: 8px;
+  border-radius: var(--nikit-radius-full);
+  border: 2px solid var(--nikit-bg-base);
+}
+
+.online {
+  background-color: var(--nikit-success-base);
+}
+
+.offline {
+  background-color: var(--nikit-text-disabled);
+}
+
+.local {
+  background-color: var(--nikit-local-base);
+  box-shadow: 0 0 6px var(--nikit-local-glow);
+}
+
+.busy {
+  background-color: var(--nikit-warning-base);
+}

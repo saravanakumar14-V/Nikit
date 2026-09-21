@@ -1,0 +1,98 @@
+.codeContainer {
+  margin: 12px 0;
+  border-radius: var(--nikit-radius-md);
+  border: 1px solid var(--nikit-border-subtle);
+  background-color: var(--nikit-surface-sunken);
+  overflow: hidden;
+  font-family: var(--nikit-font-mono);
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+
+.codeHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px;
+  background-color: var(--nikit-surface-base);
+  border-bottom: 1px solid var(--nikit-border-subtle);
+  user-select: none;
+}
+
+.codeHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.langBadge {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--nikit-text-secondary);
+  letter-spacing: 0.04em;
+}
+
+.codeFilename {
+  font-size: 11px;
+  color: var(--nikit-text-tertiary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.copyButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--nikit-text-tertiary);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--nikit-radius-sm);
+  cursor: pointer;
+  transition: all var(--nikit-duration-fast) var(--nikit-ease-default);
+}
+
+.copyButton:hover {
+  color: var(--nikit-text-primary);
+  background-color: var(--nikit-surface-overlay);
+  border-color: var(--nikit-border-subtle);
+}
+
+.copyButtonCopied {
+  color: var(--nikit-local-base);
+}
+
+.codeBody {
+  display: flex;
+  overflow-x: auto;
+  padding: 12px 0;
+}
+
+.lineNumbers {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  text-align: right;
+  color: var(--nikit-text-tertiary);
+  opacity: 0.45;
+  user-select: none;
+  font-size: 12px;
+  border-right: 1px solid var(--nikit-border-subtle);
+  margin-right: 12px;
+}
+
+.codeSnippet {
+  margin: 0;
+  padding: 0 16px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: var(--nikit-text-primary);
+  white-space: pre;
+  tab-size: 2;
+  flex: 1;
+}

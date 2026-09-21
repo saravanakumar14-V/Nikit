@@ -1,0 +1,245 @@
+/**
+ * @nikit/tokens - Quiet Intelligence Design System Tokens
+ * Single source of truth for all visual properties.
+ */
+
+:root {
+  /* ==========================================================================
+     COLOR TOKENS - DARK GRAPHITE THEME (Default)
+     ========================================================================== */
+
+  /* Base & Canvas Surfaces */
+  --nikit-bg-canvas: #090a0c;
+  --nikit-bg-base: #0f1013;
+  --nikit-bg-surface: #15171b;
+  --nikit-bg-surface-raised: #1c1f24;
+  --nikit-bg-surface-elevated: #23272e;
+  --nikit-bg-surface-overlay: #2a2e37;
+
+  /* Interactive Surface Overlays */
+  --nikit-bg-hover: rgba(255, 255, 255, 0.045);
+  --nikit-bg-hover-subtle: rgba(255, 255, 255, 0.025);
+  --nikit-bg-active: rgba(255, 255, 255, 0.08);
+  --nikit-bg-selected: rgba(255, 255, 255, 0.06);
+  --nikit-bg-disabled: rgba(255, 255, 255, 0.02);
+
+  /* Typography / Text Tiers */
+  --nikit-text-primary: #f0f2f5;
+  --nikit-text-secondary: #9da3ae;
+  --nikit-text-tertiary: #606773;
+  --nikit-text-disabled: #3d434d;
+  --nikit-text-inverse: #090a0c;
+  --nikit-text-code: #e2e8f0;
+
+  /* Borders & Dividers */
+  --nikit-border-subtle: rgba(255, 255, 255, 0.065);
+  --nikit-border-default: rgba(255, 255, 255, 0.11);
+  --nikit-border-strong: rgba(255, 255, 255, 0.18);
+  --nikit-border-hover: rgba(255, 255, 255, 0.24);
+  --nikit-border-focus: var(--nikit-accent-base);
+
+  /* Signature Accent (Configurable, Default: Titanium Cobalt) */
+  --nikit-accent-base: #3b82f6;
+  --nikit-accent-hover: #60a5fa;
+  --nikit-accent-active: #2563eb;
+  --nikit-accent-subtle: rgba(59, 130, 246, 0.12);
+  --nikit-accent-subtle-hover: rgba(59, 130, 246, 0.18);
+  --nikit-accent-text: #ffffff;
+  --nikit-accent-glow: rgba(59, 130, 246, 0.25);
+
+  /* Semantic Statuses */
+  --nikit-success-base: #10b981;
+  --nikit-success-hover: #34d399;
+  --nikit-success-subtle: rgba(16, 185, 129, 0.12);
+  --nikit-success-text: #34d399;
+  --nikit-success-border: rgba(16, 185, 129, 0.25);
+
+  --nikit-warning-base: #f59e0b;
+  --nikit-warning-hover: #fbbf24;
+  --nikit-warning-subtle: rgba(245, 158, 11, 0.12);
+  --nikit-warning-text: #fbbf24;
+  --nikit-warning-border: rgba(245, 158, 11, 0.25);
+
+  --nikit-danger-base: #ef4444;
+  --nikit-danger-hover: #f87171;
+  --nikit-danger-subtle: rgba(239, 68, 68, 0.12);
+  --nikit-danger-text: #f87171;
+  --nikit-danger-border: rgba(239, 68, 68, 0.25);
+
+  /* Local Model / Runtime Indicator */
+  --nikit-local-base: #10b981;
+  --nikit-local-glow: rgba(16, 185, 129, 0.45);
+
+  /* ==========================================================================
+     TYPOGRAPHY SCALE
+     ========================================================================== */
+
+  --nikit-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --nikit-font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'Courier New', monospace;
+
+  /* Font Sizes */
+  --nikit-text-2xs: 0.6875rem; /* 11px */
+  --nikit-text-xs: 0.75rem;     /* 12px */
+  --nikit-text-sm: 0.8125rem;   /* 13px */
+  --nikit-text-base: 0.875rem;  /* 14px */
+  --nikit-text-md: 0.9375rem;   /* 15px */
+  --nikit-text-lg: 1.0625rem;   /* 17px */
+  --nikit-text-xl: 1.25rem;     /* 20px */
+  --nikit-text-2xl: 1.5rem;     /* 24px */
+  --nikit-text-3xl: 1.875rem;   /* 30px */
+  --nikit-text-4xl: 2.25rem;    /* 36px */
+
+  /* Font Weights */
+  --nikit-weight-light: 300;
+  --nikit-weight-regular: 400;
+  --nikit-weight-medium: 500;
+  --nikit-weight-semibold: 600;
+  --nikit-weight-bold: 700;
+
+  /* Line Heights */
+  --nikit-leading-none: 1;
+  --nikit-leading-tight: 1.25;
+  --nikit-leading-snug: 1.375;
+  --nikit-leading-normal: 1.5;
+  --nikit-leading-relaxed: 1.625;
+
+  /* Letter Spacing */
+  --nikit-tracking-tighter: -0.025em;
+  --nikit-tracking-tight: -0.0125em;
+  --nikit-tracking-normal: 0em;
+  --nikit-tracking-wide: 0.025em;
+  --nikit-tracking-wider: 0.05em;
+
+  /* ==========================================================================
+     SPACING SCALE (4px base)
+     ========================================================================== */
+
+  --nikit-space-0: 0px;
+  --nikit-space-0-5: 2px;
+  --nikit-space-1: 4px;
+  --nikit-space-1-5: 6px;
+  --nikit-space-2: 8px;
+  --nikit-space-2-5: 10px;
+  --nikit-space-3: 12px;
+  --nikit-space-3-5: 14px;
+  --nikit-space-4: 16px;
+  --nikit-space-5: 20px;
+  --nikit-space-6: 24px;
+  --nikit-space-7: 28px;
+  --nikit-space-8: 32px;
+  --nikit-space-10: 40px;
+  --nikit-space-12: 48px;
+  --nikit-space-16: 64px;
+  --nikit-space-20: 80px;
+
+  /* ==========================================================================
+     BORDER RADIUS SCALE
+     ========================================================================== */
+
+  --nikit-radius-none: 0px;
+  --nikit-radius-xs: 4px;
+  --nikit-radius-sm: 6px;
+  --nikit-radius-md: 8px;
+  --nikit-radius-lg: 12px;
+  --nikit-radius-xl: 16px;
+  --nikit-radius-2xl: 20px;
+  --nikit-radius-full: 9999px;
+
+  /* ==========================================================================
+     ELEVATION & SHADOW SCALE
+     ========================================================================== */
+
+  --nikit-shadow-none: none;
+  --nikit-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --nikit-shadow-md: 0 4px 14px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  --nikit-shadow-lg: 0 10px 28px rgba(0, 0, 0, 0.58), 0 0 0 1px rgba(255, 255, 255, 0.07);
+  --nikit-shadow-xl: 0 20px 48px rgba(0, 0, 0, 0.70), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  --nikit-shadow-glow: 0 0 24px var(--nikit-accent-glow);
+  --nikit-shadow-inner-bevel: inset 0 1px 0 rgba(255, 255, 255, 0.065);
+
+  /* ==========================================================================
+     MOTION & TRANSITIONS
+     ========================================================================== */
+
+  --nikit-ease-default: cubic-bezier(0.16, 1, 0.3, 1);
+  --nikit-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --nikit-ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --nikit-duration-instant: 80ms;
+  --nikit-duration-fast: 150ms;
+  --nikit-duration-base: 220ms;
+  --nikit-duration-slow: 350ms;
+
+  /* ==========================================================================
+     LAYOUT & SIZING TOKENS
+     ========================================================================== */
+
+  --nikit-header-height: 52px;
+  --nikit-sidebar-width: 260px;
+  --nikit-sidebar-collapsed-width: 64px;
+  --nikit-reading-width: 768px;
+  --nikit-composer-max-width: 768px;
+  --nikit-dialog-max-width: 520px;
+  --nikit-command-max-width: 580px;
+  --nikit-popover-max-width: 320px;
+
+  /* Z-Index Hierarchy */
+  --nikit-z-base: 1;
+  --nikit-z-sticky: 100;
+  --nikit-z-dropdown: 200;
+  --nikit-z-popover: 300;
+  --nikit-z-dialog-backdrop: 400;
+  --nikit-z-dialog: 450;
+  --nikit-z-tooltip: 500;
+  --nikit-z-toast: 600;
+}
+
+/* ==========================================================================
+   OPTIONAL ACCENT THEME VARIANTS (Switchable)
+   ========================================================================== */
+
+[data-theme-accent="indigo"] {
+  --nikit-accent-base: #6366f1;
+  --nikit-accent-hover: #818cf8;
+  --nikit-accent-active: #4f46e5;
+  --nikit-accent-subtle: rgba(99, 102, 241, 0.12);
+  --nikit-accent-subtle-hover: rgba(99, 102, 241, 0.18);
+  --nikit-accent-glow: rgba(99, 102, 241, 0.25);
+}
+
+[data-theme-accent="cyan"] {
+  --nikit-accent-base: #06b6d4;
+  --nikit-accent-hover: #22d3ee;
+  --nikit-accent-active: #0891b2;
+  --nikit-accent-subtle: rgba(6, 182, 212, 0.12);
+  --nikit-accent-subtle-hover: rgba(6, 182, 212, 0.18);
+  --nikit-accent-glow: rgba(6, 182, 212, 0.25);
+}
+
+[data-theme-accent="amber"] {
+  --nikit-accent-base: #d97706;
+  --nikit-accent-hover: #f59e0b;
+  --nikit-accent-active: #b45309;
+  --nikit-accent-subtle: rgba(217, 119, 6, 0.14);
+  --nikit-accent-subtle-hover: rgba(217, 119, 6, 0.20);
+  --nikit-accent-glow: rgba(217, 119, 6, 0.25);
+}
+
+[data-theme-accent="emerald"] {
+  --nikit-accent-base: #10b981;
+  --nikit-accent-hover: #34d399;
+  --nikit-accent-active: #059669;
+  --nikit-accent-subtle: rgba(16, 185, 129, 0.12);
+  --nikit-accent-subtle-hover: rgba(16, 185, 129, 0.18);
+  --nikit-accent-glow: rgba(16, 185, 129, 0.25);
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --nikit-duration-instant: 0ms;
+    --nikit-duration-fast: 0ms;
+    --nikit-duration-base: 0ms;
+    --nikit-duration-slow: 0ms;
+  }
+}

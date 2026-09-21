@@ -1,0 +1,36 @@
+.container {
+  display: inline-flex;
+  position: relative;
+}
+
+.triggerWrapper {
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.popover {
+  position: fixed;
+  z-index: var(--nikit-z-popover);
+  background-color: var(--nikit-bg-surface-raised);
+  border: 1px solid var(--nikit-border-strong);
+  border-radius: var(--nikit-radius-lg);
+  box-shadow: var(--nikit-shadow-lg), var(--nikit-shadow-inner-bevel);
+  padding: var(--nikit-space-3);
+  color: var(--nikit-text-primary);
+  font-family: var(--nikit-font-sans);
+  max-width: calc(100vw - 16px);
+  max-height: calc(100vh - 16px);
+  overflow-y: auto;
+  animation: popoverFadeIn var(--nikit-duration-fast) var(--nikit-ease-default);
+}
+
+@keyframes popoverFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-3px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "v2",
+  "experimentId": "exp-zaqx-r02-001",
+  "cycleId": "zaqx-r02",
+  "modelScale": "5.4M (experimental-tiny)",
+  "checkpoint": "D:\\Nikit\\packages\\zaqx\\python\\zaqx\\research\\..\\artifacts\\zaqx_r02_best.pt",
+  "checkpointHash": "7b804033ba3b9452a655c54434358300a9c34efb5d0dd774a22666ac8c038b41",
+  "bestStep": 200,
+  "gguf": "D:\\Nikit\\packages\\zaqx\\python\\zaqx\\research\\..\\artifacts\\zaqx_r02_baseline.gguf",
+  "datasetHash": "e98f1f55d09a3a7514d6ef4dee479bcfefdb6e08fea52c71fa121e25b5dd2a42",
+  "tokenizerHash": "tok-zaqx-v1.0.0-vsize386",
+  "status": {
+    "researchExperiment": "PASS",
+    "training": "PASS",
+    "evaluation": "PASS",
+    "gguf": "PASS",
+    "llamaCpp": "PASS",
+    "nikitRuntime": "PASS"
+  },
+  "saturationStatus": "still_learning",
+  "recommendation": "continue 5.4M"
+}

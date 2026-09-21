@@ -1,0 +1,184 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: var(--nikit-font-sans);
+  font-weight: var(--nikit-weight-medium);
+  letter-spacing: var(--nikit-tracking-tight);
+  border-radius: var(--nikit-radius-md);
+  border: 1px solid transparent;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: none;
+  box-shadow: var(--nikit-shadow-none);
+  transition: background-color var(--nikit-duration-fast) var(--nikit-ease-default),
+              border-color var(--nikit-duration-fast) var(--nikit-ease-default),
+              color var(--nikit-duration-fast) var(--nikit-ease-default),
+              box-shadow var(--nikit-duration-fast) var(--nikit-ease-default),
+              transform var(--nikit-duration-instant) var(--nikit-ease-default);
+}
+
+.button:focus-visible {
+  box-shadow: 0 0 0 2px var(--nikit-bg-base), 0 0 0 4px var(--nikit-accent-base);
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* SIZES */
+.sm {
+  height: 28px;
+  padding: 0 var(--nikit-space-2-5);
+  font-size: var(--nikit-text-xs);
+  gap: var(--nikit-space-1-5);
+  border-radius: var(--nikit-radius-sm);
+}
+
+.md {
+  height: 36px;
+  padding: 0 var(--nikit-space-3-5);
+  font-size: var(--nikit-text-sm);
+  gap: var(--nikit-space-2);
+}
+
+.lg {
+  height: 44px;
+  padding: 0 var(--nikit-space-5);
+  font-size: var(--nikit-text-base);
+  gap: var(--nikit-space-2-5);
+  border-radius: var(--nikit-radius-lg);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+/* VARIANTS */
+
+/* Primary - Signature Accent or High Contrast */
+.primary {
+  background-color: var(--nikit-accent-base);
+  color: var(--nikit-accent-text);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: var(--nikit-shadow-sm), var(--nikit-shadow-inner-bevel);
+}
+
+.primary:hover:not(:disabled) {
+  background-color: var(--nikit-accent-hover);
+  box-shadow: var(--nikit-shadow-md), var(--nikit-shadow-inner-bevel);
+}
+
+.primary:active:not(:disabled) {
+  background-color: var(--nikit-accent-active);
+}
+
+/* Secondary - Elevated Dark Surface */
+.secondary {
+  background-color: var(--nikit-bg-surface-raised);
+  color: var(--nikit-text-primary);
+  border-color: var(--nikit-border-default);
+  box-shadow: var(--nikit-shadow-sm), var(--nikit-shadow-inner-bevel);
+}
+
+.secondary:hover:not(:disabled) {
+  background-color: var(--nikit-bg-surface-elevated);
+  border-color: var(--nikit-border-hover);
+}
+
+.secondary:active:not(:disabled) {
+  background-color: var(--nikit-bg-surface);
+}
+
+/* Subtle - Lightly tinted dark surface */
+.subtle {
+  background-color: var(--nikit-bg-hover);
+  color: var(--nikit-text-primary);
+  border-color: transparent;
+}
+
+.subtle:hover:not(:disabled) {
+  background-color: var(--nikit-bg-active);
+  color: var(--nikit-text-primary);
+}
+
+/* Outline - Transparent with subtle border */
+.outline {
+  background-color: transparent;
+  color: var(--nikit-text-primary);
+  border-color: var(--nikit-border-default);
+}
+
+.outline:hover:not(:disabled) {
+  background-color: var(--nikit-bg-hover);
+  border-color: var(--nikit-border-strong);
+}
+
+/* Ghost - Completely flat */
+.ghost {
+  background-color: transparent;
+  color: var(--nikit-text-secondary);
+  border-color: transparent;
+}
+
+.ghost:hover:not(:disabled) {
+  background-color: var(--nikit-bg-hover);
+  color: var(--nikit-text-primary);
+}
+
+/* Danger - Subtle destructive */
+.danger {
+  background-color: var(--nikit-danger-subtle);
+  color: var(--nikit-danger-text);
+  border-color: var(--nikit-danger-border);
+}
+
+.danger:hover:not(:disabled) {
+  background-color: var(--nikit-danger-base);
+  color: var(--nikit-text-primary);
+  border-color: transparent;
+}
+
+/* Slots and Spinner */
+.iconSlot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  line-height: var(--nikit-leading-none);
+}
+
+.spinner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinnerIcon {
+  width: 14px;
+  height: 14px;
+  animation: spin 750ms linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,109 @@
+.tabList {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  font-family: var(--nikit-font-sans);
+  user-select: none;
+}
+
+.fullWidth {
+  display: flex;
+  width: 100%;
+}
+
+.fullWidth .tab {
+  flex: 1;
+  justify-content: center;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--nikit-space-2);
+  background: transparent;
+  border: none;
+  color: var(--nikit-text-secondary);
+  font-family: inherit;
+  font-weight: var(--nikit-weight-medium);
+  letter-spacing: var(--nikit-tracking-tight);
+  cursor: pointer;
+  outline: none;
+  white-space: nowrap;
+  transition: color var(--nikit-duration-fast) var(--nikit-ease-default),
+              background-color var(--nikit-duration-fast) var(--nikit-ease-default),
+              border-color var(--nikit-duration-fast) var(--nikit-ease-default);
+}
+
+.tab:hover:not(:disabled) {
+  color: var(--nikit-text-primary);
+}
+
+.tab:focus-visible {
+  outline: 2px solid var(--nikit-accent-base);
+  outline-offset: 2px;
+}
+
+.tab:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.tabIcon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.tabBadge {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* VARIANT: SEGMENTED */
+.segmented {
+  background-color: var(--nikit-bg-surface);
+  border: 1px solid var(--nikit-border-subtle);
+  border-radius: var(--nikit-radius-md);
+  padding: var(--nikit-space-1);
+  gap: var(--nikit-space-1);
+}
+
+.segmented .tab {
+  border-radius: var(--nikit-radius-sm);
+  padding: var(--nikit-space-1-5) var(--nikit-space-3);
+  font-size: var(--nikit-text-xs);
+}
+
+.segmented .tab.active {
+  background-color: var(--nikit-bg-surface-raised);
+  color: var(--nikit-text-primary);
+  box-shadow: var(--nikit-shadow-sm), var(--nikit-shadow-inner-bevel);
+}
+
+/* VARIANT: UNDERLINE */
+.underline {
+  border-bottom: 1px solid var(--nikit-border-subtle);
+  gap: var(--nikit-space-4);
+}
+
+.underline .tab {
+  padding: var(--nikit-space-2-5) var(--nikit-space-1);
+  font-size: var(--nikit-text-sm);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+
+.underline .tab.active {
+  color: var(--nikit-text-primary);
+  border-bottom-color: var(--nikit-accent-base);
+}
+
+/* SIZES */
+.sm .tab {
+  font-size: var(--nikit-text-xs);
+  padding: var(--nikit-space-1) var(--nikit-space-2-5);
+}
+
+.lg .tab {
+  font-size: var(--nikit-text-base);
+  padding: var(--nikit-space-2-5) var(--nikit-space-4);
+}

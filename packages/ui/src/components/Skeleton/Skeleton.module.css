@@ -1,0 +1,47 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nikit-space-2);
+  width: 100%;
+}
+
+.skeleton {
+  display: block;
+  background: linear-gradient(
+    90deg,
+    var(--nikit-bg-surface-raised) 0%,
+    var(--nikit-bg-surface-elevated) 50%,
+    var(--nikit-bg-surface-raised) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
+  border-radius: var(--nikit-radius-sm);
+}
+
+.text {
+  height: 14px;
+  width: 100%;
+  border-radius: var(--nikit-radius-xs);
+}
+
+.circular {
+  border-radius: var(--nikit-radius-full);
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.rectangular {
+  width: 100%;
+  min-height: 48px;
+  border-radius: var(--nikit-radius-md);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

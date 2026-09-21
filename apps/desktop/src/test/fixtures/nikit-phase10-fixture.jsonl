@@ -1,0 +1,5 @@
+{"prompt":"What is KV cache in transformers?","response":"KV cache stores previously computed Key and Value projection states during autoregressive decoding to avoid quadratic recomputation."}
+{"prompt":"Explain multi-head latent attention.","response":"Multi-head latent attention compresses Key-Value tensors into a shared low-rank latent representation to reduce memory bandwidth."}
+{"prompt":"Write a TypeScript function to check if a number is prime.","response":"export function isPrime(n: number): boolean {\n  if (n <= 1) return false;\n  for (let i = 2; i * i <= n; i++) {\n    if (n % i === 0) return false;\n  }\n  return true;\n}"}
+{"prompt":"What is gradient checkpointing?","response":"Gradient checkpointing trades additional forward computation for reduced activation memory during backpropagation."}
+{"prompt":"Define temperature in autoregressive sampling.","response":"Temperature scales logits before softmax to modulate randomness; lower values yield deterministic outputs."}

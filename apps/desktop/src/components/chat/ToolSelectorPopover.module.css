@@ -1,0 +1,138 @@
+.popoverCard {
+  width: 320px;
+  padding: 12px;
+  background-color: var(--nikit-surface-raised);
+  border: 1px solid var(--nikit-border-base);
+  border-radius: var(--nikit-radius-lg);
+  box-shadow: var(--nikit-shadow-xl);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.popoverHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--nikit-border-subtle);
+}
+
+.popoverTitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--nikit-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.toolList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.toolRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px;
+  border-radius: var(--nikit-radius-md);
+  background: var(--nikit-surface-sunken);
+  border: 1px solid var(--nikit-border-subtle);
+  transition: all var(--nikit-duration-fast) var(--nikit-ease-default);
+}
+
+.toolRowDisabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: var(--nikit-surface-base);
+}
+
+.toolInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.toolNameRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.toolName {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--nikit-text-primary);
+}
+
+.toolDescription {
+  font-size: 11px;
+  color: var(--nikit-text-tertiary);
+  line-height: 1.35;
+}
+
+.unavailableReason {
+  font-size: 10px;
+  color: var(--nikit-warning-base, #eab308);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.toggleSwitch {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.toggleSwitch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggleSlider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--nikit-surface-overlay);
+  border: 1px solid var(--nikit-border-subtle);
+  transition: 0.2s;
+  border-radius: 18px;
+}
+
+.toggleSlider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 2px;
+  bottom: 2px;
+  background-color: var(--nikit-text-secondary);
+  transition: 0.2s;
+  border-radius: 50%;
+}
+
+.toggleSwitch input:checked + .toggleSlider {
+  background-color: var(--nikit-accent-base);
+  border-color: var(--nikit-accent-base);
+}
+
+.toggleSwitch input:checked + .toggleSlider:before {
+  transform: translateX(14px);
+  background-color: #ffffff;
+}
+
+.toggleSwitch input:disabled + .toggleSlider {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

@@ -1,0 +1,57 @@
+.scrollButton {
+  position: absolute;
+  bottom: 84px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--nikit-radius-full);
+  background-color: var(--nikit-surface-overlay);
+  color: var(--nikit-text-primary);
+  border: 1px solid var(--nikit-border-subtle);
+  box-shadow: var(--nikit-shadow-lg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  z-index: 20;
+  transition: all var(--nikit-duration-fast) var(--nikit-ease-default);
+  animation: fadeIn 0.2s ease-out;
+}
+
+.scrollButton:hover {
+  background-color: var(--nikit-surface-raised);
+  border-color: var(--nikit-accent-base);
+  color: var(--nikit-accent-base);
+  box-shadow: var(--nikit-shadow-xl);
+}
+
+.icon {
+  transition: transform var(--nikit-duration-fast) var(--nikit-ease-default);
+}
+
+.scrollButton:hover .icon {
+  transform: translateY(2px);
+}
+
+.badgeDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--nikit-accent-base);
+  box-shadow: 0 0 6px var(--nikit-accent-base);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 8px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}

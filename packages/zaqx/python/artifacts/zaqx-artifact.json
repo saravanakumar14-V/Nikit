@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "v1",
+  "modelId": "zaqx-1.0-tiny-001",
+  "modelVersion": "1.0.0",
+  "architecture": "zaqx",
+  "configHash": "afb88f29509a785658abeb3ecd32d238d6e10aa9de558e9d8e78c9b62bb28a58",
+  "tokenizerHash": "tok-zaqx-v1-vsize4096",
+  "datasetHash": "ds-zaqx-corpus-v1",
+  "checkpointHash": "a5db067335f23f6f1cd1f4f7aad1d4d15a84282076e25486afd2fb6e44ce89e6",
+  "ggufHash": "69ca4233d6382d0d75f13e4881b1fab6966424c49873f62968cc5711a2a02134",
+  "converterVersion": "gguf-0.19.0",
+  "llamaCppVersion": "b4700",
+  "quantization": "F32",
+  "createdAt": "2026-08-27T16:20:00Z",
+  "promotionStatus": "candidate",
+  "metadata": {
+    "totalParams": 5401856,
+    "contextLength": 1024,
+    "hiddenSize": 256,
+    "layers": 6,
+    "heads": 4,
+    "kvHeads": 2,
+    "vocabSize": 4096
+  }
+}

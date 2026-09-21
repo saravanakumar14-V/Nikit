@@ -1,0 +1,35 @@
+.showcaseContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.showcaseHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nikit-space-3);
+  padding: var(--nikit-space-4) var(--nikit-space-6);
+  border-bottom: 1px solid var(--nikit-border-subtle);
+  background-color: var(--nikit-bg-base);
+}
+
+.headerTitleGroup {
+  display: flex;
+  align-items: center;
+  gap: var(--nikit-space-2-5);
+}
+
+.headerTitle {
+  font-size: var(--nikit-text-lg);
+  font-weight: var(--nikit-weight-bold);
+  color: var(--nikit-text-primary);
+  margin: 0;
+}
+
+.showcaseContent {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--nikit-space-6);
+}

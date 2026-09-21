@@ -1,0 +1,57 @@
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--nikit-bg-canvas);
+  color: var(--nikit-text-primary);
+  overflow: hidden;
+  font-family: var(--nikit-font-sans);
+}
+
+.topNavigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--nikit-space-2) var(--nikit-space-4);
+  background-color: var(--nikit-bg-base);
+  border-bottom: 1px solid var(--nikit-border-subtle);
+  flex-shrink: 0;
+  z-index: var(--nikit-z-sticky);
+}
+
+.navBrand {
+  display: flex;
+  align-items: center;
+  gap: var(--nikit-space-2-5);
+}
+
+.brandIcon {
+  color: var(--nikit-accent-base);
+}
+
+.brandTitle {
+  font-weight: var(--nikit-weight-bold);
+  font-size: var(--nikit-text-sm);
+  letter-spacing: var(--nikit-tracking-wider);
+  color: var(--nikit-text-primary);
+}
+
+.navTabs {
+  display: flex;
+  align-items: center;
+}
+
+.viewContent {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.scrollableWrapper {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--nikit-space-6) var(--nikit-space-4);
+}

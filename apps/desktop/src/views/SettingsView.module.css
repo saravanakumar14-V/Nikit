@@ -1,0 +1,196 @@
+.viewContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nikit-space-6);
+  width: 100%;
+  padding-bottom: var(--nikit-space-8);
+}
+
+.viewHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nikit-space-2);
+}
+
+.viewTitle {
+  font-size: var(--nikit-text-2xl);
+  font-weight: var(--nikit-weight-bold);
+  color: var(--nikit-text-primary);
+  margin: 0;
+  letter-spacing: var(--nikit-tracking-tight);
+}
+
+.viewDescription {
+  font-size: var(--nikit-text-sm);
+  color: var(--nikit-text-secondary);
+  line-height: var(--nikit-leading-relaxed);
+  margin: 0;
+}
+
+.settingsSection {
+  background-color: var(--nikit-bg-surface);
+  border: 1px solid var(--nikit-border-subtle);
+  border-radius: var(--nikit-radius-lg);
+  padding: var(--nikit-space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--nikit-space-4);
+}
+
+.sectionTitle {
+  font-size: var(--nikit-text-md);
+  font-weight: var(--nikit-weight-semibold);
+  color: var(--nikit-text-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--nikit-space-2);
+}
+
+.sectionDesc {
+  font-size: var(--nikit-text-xs);
+  color: var(--nikit-text-secondary);
+  line-height: var(--nikit-leading-relaxed);
+}
+
+/* Accent Grid */
+.accentGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: var(--nikit-space-3);
+  margin-top: var(--nikit-space-1);
+}
+
+.accentOption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--nikit-space-2);
+  padding: var(--nikit-space-3);
+  background-color: var(--nikit-bg-surface-raised);
+  border: 1px solid var(--nikit-border-subtle);
+  border-radius: var(--nikit-radius-md);
+  cursor: pointer;
+  transition: all var(--nikit-duration-fast) ease;
+}
+
+.accentOption:hover {
+  background-color: var(--nikit-bg-surface-elevated);
+  border-color: var(--nikit-border-default);
+}
+
+.accentOptionSelected {
+  border-color: var(--nikit-accent-base);
+  box-shadow: 0 0 0 1px var(--nikit-accent-base), 0 0 12px var(--nikit-accent-glow);
+}
+
+.accentColorDisc {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--nikit-radius-full);
+}
+
+.accentOptionLabel {
+  font-size: var(--nikit-text-xs);
+  font-weight: var(--nikit-weight-medium);
+  color: var(--nikit-text-primary);
+}
+
+/* Preference Rows */
+.prefList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nikit-space-3);
+}
+
+.prefRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--nikit-space-2-5) var(--nikit-space-3);
+  background-color: var(--nikit-bg-surface-raised);
+  border-radius: var(--nikit-radius-md);
+  border: 1px solid var(--nikit-border-subtle);
+}
+
+.prefInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.prefLabel {
+  font-size: var(--nikit-text-sm);
+  font-weight: var(--nikit-weight-medium);
+  color: var(--nikit-text-primary);
+}
+
+.prefSubtext {
+  font-size: var(--nikit-text-2xs);
+  color: var(--nikit-text-tertiary);
+}
+
+/* Toggle Switch */
+.toggleSwitch {
+  width: 40px;
+  height: 22px;
+  background-color: var(--nikit-bg-surface-elevated);
+  border-radius: var(--nikit-radius-full);
+  border: 1px solid var(--nikit-border-subtle);
+  position: relative;
+  cursor: pointer;
+  transition: all var(--nikit-duration-fast) ease;
+}
+
+.toggleSwitchActive {
+  background-color: var(--nikit-accent-base);
+  border-color: var(--nikit-accent-base);
+}
+
+.toggleSwitchKnob {
+  width: 16px;
+  height: 16px;
+  border-radius: var(--nikit-radius-full);
+  background-color: #ffffff;
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  transition: transform var(--nikit-duration-fast) ease;
+}
+
+.toggleSwitchActive .toggleSwitchKnob {
+  transform: translateX(18px);
+}
+
+/* Shortcut Table */
+.shortcutTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--nikit-text-xs);
+}
+
+.shortcutTable th {
+  text-align: left;
+  padding: var(--nikit-space-2) var(--nikit-space-3);
+  color: var(--nikit-text-tertiary);
+  border-bottom: 1px solid var(--nikit-border-subtle);
+  font-weight: var(--nikit-weight-semibold);
+  font-size: var(--nikit-text-2xs);
+  text-transform: uppercase;
+  letter-spacing: var(--nikit-tracking-wider);
+}
+
+.shortcutTable td {
+  padding: var(--nikit-space-2-5) var(--nikit-space-3);
+  border-bottom: 1px solid var(--nikit-border-subtle);
+  color: var(--nikit-text-secondary);
+}
+
+.shortcutKbd {
+  font-family: var(--nikit-font-mono);
+  font-size: var(--nikit-text-xs);
+  padding: 2px 6px;
+  border-radius: var(--nikit-radius-xs);
+  background-color: var(--nikit-bg-surface-raised);
+  border: 1px solid var(--nikit-border-default);
+  color: var(--nikit-text-primary);
+}

@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "phase": 12,
+  "zaqxArchitecture": "Decoder-Only Transformer (RoPE, RMSNorm, GQA, SwiGLU, Causal LM)",
+  "calculatedParameters": 5401856,
+  "actualPyTorchParameters": 5401856,
+  "tokenizer": "ZaqX Native Tokenizer",
+  "tokenizerHash": "tok-zaqx-v1-vsize4096",
+  "checkpoint": "D:\\Nikit\\packages\\zaqx\\python\\artifacts\\zaqx_tiny_checkpoint.pt",
+  "checkpointHash": "a5db067335f23f6f1cd1f4f7aad1d4d15a84282076e25486afd2fb6e44ce89e6",
+  "gguf": "D:\\Nikit\\packages\\zaqx\\python\\artifacts\\zaqx_1.0_tiny.gguf",
+  "ggufHash": "69ca4233d6382d0d75f13e4881b1fab6966424c49873f62968cc5711a2a02134",
+  "ggufArchitecture": "zaqx",
+  "ggufValidation": "PASS",
+  "parityStatus": "PASS",
+  "llamaCppVersion": "b4700",
+  "promotionStatus": "candidate"
+}

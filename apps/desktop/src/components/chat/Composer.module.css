@@ -1,0 +1,244 @@
+.composerContainer {
+  position: relative;
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 12px 16px 20px 16px;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 10, 12, 0) 0%,
+    rgba(10, 10, 12, 0.8) 20%,
+    var(--nikit-surface-base) 100%
+  );
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.composerCard {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--nikit-surface-raised);
+  border: 1px solid var(--nikit-border-base);
+  border-radius: var(--nikit-radius-lg);
+  box-shadow: var(--nikit-shadow-lg);
+  transition: all var(--nikit-duration-fast) var(--nikit-ease-default);
+  overflow: hidden;
+}
+
+.composerCard:focus-within {
+  border-color: var(--nikit-accent-base);
+  box-shadow: 0 0 0 2px var(--nikit-accent-subtle), var(--nikit-shadow-xl);
+}
+
+.composerCardStreaming {
+  border-color: var(--nikit-accent-subtle);
+}
+
+.textareaWrapper {
+  padding: 12px 16px 6px 16px;
+  min-height: 48px;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 44px;
+  max-height: 220px;
+  background: transparent;
+  border: none;
+  color: var(--nikit-text-primary);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.55;
+  resize: none;
+  outline: none;
+}
+
+.textarea::placeholder {
+  color: var(--nikit-text-tertiary);
+}
+
+.actionBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px 10px 12px;
+}
+
+.actionsLeft {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.toolButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 8px;
+  border-radius: var(--nikit-radius-sm);
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--nikit-text-tertiary);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--nikit-duration-fast) var(--nikit-ease-default);
+}
+
+.toolButton:hover {
+  background-color: var(--nikit-surface-overlay);
+  color: var(--nikit-text-primary);
+  border-color: var(--nikit-border-subtle);
+}
+
+.modelChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  border-radius: var(--nikit-radius-full);
+  background-color: var(--nikit-surface-overlay);
+  border: 1px solid var(--nikit-border-subtle);
+  color: var(--nikit-text-secondary);
+  font-size: 11px;
+  font-weight: 500;
+  cursor: default;
+  user-select: none;
+}
+
+.sparkleIcon {
+  color: var(--nikit-accent-base);
+}
+
+.actionsRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sendButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--nikit-radius-md);
+  background-color: var(--nikit-accent-base);
+  color: var(--nikit-accent-text, #ffffff);
+  border: none;
+  cursor: pointer;
+  transition: all var(--nikit-duration-fast) var(--nikit-ease-default);
+}
+
+.sendButton:hover:not(:disabled) {
+  background-color: var(--nikit-accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px var(--nikit-accent-subtle);
+}
+
+.sendButton:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  background-color: var(--nikit-surface-overlay);
+  color: var(--nikit-text-tertiary);
+}
+
+.stopButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--nikit-radius-md);
+  background-color: var(--nikit-surface-overlay);
+  color: var(--nikit-text-primary);
+  border: 1px solid var(--nikit-accent-base);
+  cursor: pointer;
+  transition: all var(--nikit-duration-fast) var(--nikit-ease-default);
+  animation: pulseGlow 1.5s infinite;
+}
+
+.stopButton:hover {
+  background-color: var(--nikit-danger-subtle, rgba(239, 68, 68, 0.15));
+  border-color: var(--nikit-danger-base);
+  color: var(--nikit-danger-base);
+}
+
+.stopIcon {
+  width: 11px;
+  height: 11px;
+  background-color: currentColor;
+  border-radius: 2px;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 var(--nikit-accent-subtle);
+  }
+  50% {
+    box-shadow: 0 0 0 4px var(--nikit-accent-subtle);
+  }
+}
+
+/* ATTACHMENT CHIPS & TOOL BADGES */
+.attachmentsBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px 14px 2px 14px;
+}
+
+.attachmentPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: var(--nikit-radius-md);
+  background: var(--nikit-surface-overlay);
+  border: 1px solid var(--nikit-border-subtle);
+  font-size: 11px;
+  color: var(--nikit-text-primary);
+  max-width: 260px;
+}
+
+.attachmentName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.attachmentTokenBadge {
+  font-size: 10px;
+  color: var(--nikit-accent-base);
+  font-family: var(--nikit-font-mono);
+}
+
+.removeAttachmentBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: 2px;
+  color: var(--nikit-text-tertiary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: var(--nikit-radius-full);
+}
+
+.removeAttachmentBtn:hover {
+  color: var(--nikit-danger-base, #ef4444);
+}
+
+.activeToolBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  border-radius: var(--nikit-radius-full);
+  background: var(--nikit-accent-subtle);
+  color: var(--nikit-accent-base);
+  font-size: 10px;
+  font-weight: 500;
+  font-family: var(--nikit-font-mono);
+}

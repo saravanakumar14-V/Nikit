@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "v1",
+  "experimentId": "exp-zaqx-r01-001",
+  "modelScale": "5.4M (experimental-tiny)",
+  "checkpoint": "packages/zaqx/python/artifacts\\zaqx_r01_baseline.pt",
+  "gguf": "packages/zaqx/python/artifacts\\zaqx_r01_baseline.gguf",
+  "datasetHash": "9d319683feb58b72645e32795e122e36a61f8d3be937bad964c0200c1b640a10",
+  "tokenizerHash": "tok-zaqx-r01-v1.0.0-vsize386",
+  "status": {
+    "researchExperiment": "PASS",
+    "training": "PASS",
+    "evaluation": "PASS",
+    "gguf": "PASS",
+    "llamaCpp": "PASS",
+    "nikitRuntime": "PASS"
+  },
+  "recommendation": "continue 5.4M"
+}

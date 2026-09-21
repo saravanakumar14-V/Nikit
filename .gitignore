@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+.next/
+.output/
+.turbo/
+.vite/
+target/
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+
+# Local models / checkpoints
+models/
+*.gguf
+*.pt
+*.pth
+*.safetensors
+
+# Python generated files
+**/__pycache__/
+*.pyc
+
+# TypeScript generated metadata
+*.tsbuildinfo
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+skills/

@@ -1,0 +1,99 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--nikit-z-dialog);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--nikit-space-4);
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(9, 10, 12, 0.75);
+  backdrop-filter: blur(8px);
+  animation: backdropFadeIn var(--nikit-duration-fast) var(--nikit-ease-default);
+}
+
+.dialog {
+  position: relative;
+  width: 100%;
+  max-width: var(--nikit-dialog-max-width);
+  background-color: var(--nikit-bg-surface-raised);
+  border: 1px solid var(--nikit-border-strong);
+  border-radius: var(--nikit-radius-xl);
+  box-shadow: var(--nikit-shadow-xl), var(--nikit-shadow-inner-bevel);
+  color: var(--nikit-text-primary);
+  font-family: var(--nikit-font-sans);
+  overflow: hidden;
+  animation: dialogZoomIn var(--nikit-duration-base) var(--nikit-ease-spring);
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: var(--nikit-space-5) var(--nikit-space-6) var(--nikit-space-4);
+  border-bottom: 1px solid var(--nikit-border-subtle);
+  gap: var(--nikit-space-4);
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nikit-space-1);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--nikit-text-lg);
+  font-weight: var(--nikit-weight-semibold);
+  letter-spacing: var(--nikit-tracking-tight);
+  color: var(--nikit-text-primary);
+}
+
+.description {
+  margin: 0;
+  font-size: var(--nikit-text-sm);
+  color: var(--nikit-text-secondary);
+  line-height: var(--nikit-leading-normal);
+}
+
+.content {
+  padding: var(--nikit-space-6);
+  overflow-y: auto;
+  max-height: calc(85vh - 160px);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--nikit-space-2-5);
+  padding: var(--nikit-space-4) var(--nikit-space-6);
+  border-top: 1px solid var(--nikit-border-subtle);
+  background-color: var(--nikit-bg-surface);
+}
+
+@keyframes backdropFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dialogZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
